@@ -1,3 +1,5 @@
+# PROJETO EM DESENVOLVIMENTO
+
 # Projeto loja virtual
 
 Esse projeto tem como intuito melhorar os conhecimentos com MongoDB e NodeJS
