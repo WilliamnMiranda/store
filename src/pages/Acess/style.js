@@ -2,11 +2,11 @@ import styled from 'styled-components'
 
 export const ContainerAcesso = styled.section`
   margin: 0 auto;
-  width: 80%;
+  width: 65%;
 `
 export const TituloAcesso = styled.h1`
   font-weight: bold;
-  padding:35px 10px;
+  padding:35px 0px;
   color: rgb(66, 70, 77);
   & svg{
     color: rgb(255, 101, 0);
@@ -20,6 +20,8 @@ export const Divisor = styled.div`
   margin:0px 20px;
 `
 export const ContainerGeral = styled.div`
+  width: 80%;
+  margin: 0 auto;
   display: flex;
   align-items: flex-start;
 `

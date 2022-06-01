@@ -17,7 +17,7 @@ export const Tittle =  styled.h2`
   margin-bottom: 30px;
 `
 export const ContainerFormulario = styled.form`
-  width: 70%;
+  width: 100%;
 `
 
 export const ContainerInput = styled.div`
@@ -65,7 +65,7 @@ export const SocialsLogins = styled.section`
     display: flex;
     flex-direction: column;
     flex: 1 1 0%;
-    width: 70%;
+    width: 100%;
 `
 export const SubTittle= styled.h4`
     text-transform: uppercase;
