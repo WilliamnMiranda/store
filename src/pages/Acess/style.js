@@ -15,8 +15,8 @@ export const TituloAcesso = styled.h1`
 `
 export const Divisor = styled.div`
   width: 2px;
-  background-color: red;
-  height: 400px;
+  background-color: rgb(242, 243, 244);
+  height: 650px;
   margin:0px 20px;
 `
 export const ContainerGeral = styled.div`

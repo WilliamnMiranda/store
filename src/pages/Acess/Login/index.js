@@ -1,6 +1,6 @@
 import React from 'react'
 import { Container, Tittle, ContainerFormulario, ContainerInput,ButtonSubmit, Recuperation, RecuperationText,
-  SocialsLogins,SubTittle,ButtonSocial, ButtonFacebook,ButtonGoogle,ContainerButtons } from './style'
+  SocialsLogins,SubTittle, ButtonFacebook,ButtonGoogle,ContainerButtons } from './style'
 import InputValue from '../../../components/Form/input'
 const Login = () => {
   return (
