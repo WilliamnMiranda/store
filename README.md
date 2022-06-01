@@ -1,10 +1,16 @@
-# Getting Started with Create React App
+# Projeto loja virtual
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Esse projeto tem como intuito melhorar os conhecimentos com MongoDB e NodeJS
 
-## Available Scripts
+## Sobre o projeto
 
-In the project directory, you can run:
+Projeto de uma loja virtual utilizando as seguintes tecnologias : 
+- Express
+- MongoDB
+- Mongoose
+- React ( Funcional ) Hooks + Context API
+- NodeJS
+- JWT
 
 ### `npm start`
 
