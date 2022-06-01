@@ -13,7 +13,13 @@ export const TituloAcesso = styled.h1`
     font-size: 1.1em;
   }
 `
-
+export const Divisor = styled.div`
+  width: 2px;
+  background-color: red;
+  height: 400px;
+  margin:0px 20px;
+`
 export const ContainerGeral = styled.div`
   display: flex;
+  align-items: flex-start;
 `

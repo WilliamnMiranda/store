@@ -1,8 +1,10 @@
 import React from 'react'
-import { Container } from './style'
+import { Container,Tittle } from './style'
 const Register = () => {
   return (
-    <Container>Register</Container>
+    <Container>
+      <Tittle>QUERO ME CADASTRAR</Tittle>
+    </Container>
   )
 }
 

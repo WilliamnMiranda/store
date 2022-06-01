@@ -2,13 +2,14 @@ import React from 'react'
 import Register from './Registro'
 import Login from './Login'
 import { GoPerson } from "react-icons/go";
-import { ContainerAcesso, TituloAcesso, ContainerGeral } from './style'
+import { ContainerAcesso, TituloAcesso, ContainerGeral, Divisor } from './style'
 const Access = () => {
   return (
     <ContainerAcesso>
       <TituloAcesso> <GoPerson /> IDENTIFICAÇÃO</TituloAcesso>
       <ContainerGeral>
-        <Login />
+        <Login />  
+        <Divisor />
         <Register />
       </ContainerGeral>
     </ContainerAcesso>
