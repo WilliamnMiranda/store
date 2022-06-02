@@ -24,12 +24,6 @@ export const ContainerLista = styled.ul`
 export const ContainerLogo = styled.div`
   display: flex;
   align-items: center;
-  @media(max-width: 800px) {
-      width: 100%;
-      display: flex;
-      flex-direction: row-reverse;
-      justify-content: space-between;
-  }
 `
 export const IconMenu = styled.li`
   font-size: 2.2em;

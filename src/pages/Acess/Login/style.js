@@ -8,6 +8,9 @@ export const Container = styled.section`
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  @media(max-width: 800px) {
+      width: 100%;
+  }
 `
 export const Tittle =  styled.h2`
   font-size: 24px;
@@ -79,6 +82,9 @@ export const SubTittle= styled.h4`
 export const ContainerButtons = styled.div`
   width: 100%;
   display: flex;
+  @media(max-width: 800px) {
+      flex-direction: column;
+  }
 `
 
 export const ButtonSocial = styled.button`
@@ -97,6 +103,10 @@ export const ButtonSocial = styled.button`
     align-items: center;
     cursor: pointer;
     margin-right: 10px;
+    @media(max-width: 800px) {
+      margin-bottom: 20px;
+      width: 100%;
+  }
 `
 
 export const ButtonFacebook = styled(ButtonSocial)`
