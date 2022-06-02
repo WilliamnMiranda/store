@@ -1,6 +1,5 @@
 import React from 'react'
-import { Container, Tittle, ContainerFormulario, ContainerInput,ButtonSubmit, Recuperation, RecuperationText,
-  SocialsLogins,SubTittle,ButtonFacebook,ButtonGoogle,ContainerButtons } from './style'
+import { Container, Tittle, ContainerFormulario, ContainerInput,ButtonSubmit } from './style'
   import InputValue from '../../../components/Form/input'
 const Register = () => {
   return (
