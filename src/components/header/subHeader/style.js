@@ -3,6 +3,9 @@ import styled from 'styled-components'
   export const ContainerSubMenu = styled.aside`
     width: 100%;
     background-color: rgb(255, 101, 0);
+    @media(max-width: 800px) {
+      display: none;
+  }
 `
 
   export const ContainerMenu = styled.nav`
