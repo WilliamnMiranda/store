@@ -31,7 +31,7 @@ export const IconMenu = styled.li`
 `
 export const Logo = styled.li``
 export const ContainerInput = styled.div`
-  @media(max-width: 800px) {
+  @media(max-width:  1250px) {
     display: none;
   }
   & input{
@@ -49,7 +49,7 @@ export const ContainerInput = styled.div`
 `
 export const ContainerUser = styled.div`
   color: rgba(255, 255, 255, 0.8);
-  @media(max-width: 800px) {
+  @media(max-width:  1250px) {
     display: none;
   }
 `

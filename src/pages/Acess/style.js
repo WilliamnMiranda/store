@@ -3,7 +3,7 @@ import styled from 'styled-components'
 export const ContainerAcesso = styled.section`
   margin: 0 auto;
   width: 65%;
-  @media(max-width: 800px) {
+  @media(max-width:  1250px) {
       width: 100%;
   }
 
@@ -22,7 +22,7 @@ export const Divisor = styled.div`
   background-color: rgb(242, 243, 244);
   height: 650px;
   margin:0px 20px;
-  @media(max-width: 800px) {
+  @media(max-width:  1250px) {
     display: none;
   }
 `
@@ -31,7 +31,7 @@ export const ContainerGeral = styled.div`
   margin: 0 auto;
   display: flex;
   align-items: flex-start;
-  @media(max-width: 800px) {
+  @media(max-width:  1250px) {
     flex-direction: column;
     width: 100%;
   }

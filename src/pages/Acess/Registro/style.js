@@ -8,7 +8,7 @@ export const Container = styled.section`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  @media(max-width: 800px) {
+  @media(max-width:  1250px) {
       width: 100%;
   }
 `

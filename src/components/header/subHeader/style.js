@@ -3,7 +3,7 @@ import styled from 'styled-components'
   export const ContainerSubMenu = styled.aside`
     width: 100%;
     background-color: rgb(255, 101, 0);
-    @media(max-width: 800px) {
+    @media(max-width: 1250px) {
       display: none;
   }
 `
@@ -23,6 +23,9 @@ export const ItemLista = styled.li`
     font-size: 14px;
     padding:10px 5px;
     margin-right: 25px;
+    @media(max-width: 1500px) {
+      font-size: 0.7em;
+  }
     & a {
       color:white;
     }
