@@ -3,7 +3,7 @@ import styled from 'styled-components'
   export const ContainerSubMenu = styled.aside`
     width: 100%;
     background-color: rgb(255, 101, 0);
-    @media(max-width: 1250px) {
+    @media(max-width: 800px) {
       display: none;
   }
 `
@@ -11,6 +11,9 @@ import styled from 'styled-components'
   export const ContainerMenu = styled.nav`
     width: 80%;
     margin: 0 auto;
+    @media(max-width: 1500px) {
+      width: 100%;
+  }
 `
 
   export const ContainerLista = styled.ul`
