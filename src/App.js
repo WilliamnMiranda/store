@@ -13,7 +13,7 @@ function App() {
       <GlobalStyle />
       <Header />
       <Routes>
-        <Route path='/login' element={<Access />} />
+        <Route path='/store/login' element={<Access />} />
       </Routes>
     </BrowserRouter>
   );
