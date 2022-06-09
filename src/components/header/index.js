@@ -6,7 +6,6 @@ import Drawer from '../Drawer'
 const Header = () => {
   return (
     <ContainerHeader>
-        <Drawer />
         <PrimaryHeader/>
         <SubHeader />
     </ContainerHeader>
