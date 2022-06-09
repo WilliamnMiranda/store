@@ -4,7 +4,7 @@ import { ContainerLoading } from './style'
 const Loading = () => {
   return (
     <ContainerLoading>
-        <CircularProgress />
+        <CircularProgress color={'info'} size={80}/>
     </ContainerLoading>
   )
 }
