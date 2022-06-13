@@ -29,5 +29,14 @@ export const UserStore = ({children}) => {
     localStorage.setItem('token',user.token);
     setLoading(false);
   }
-  return <UserContext.Provider value={{login,user,loading}}>{children}</UserContext.Provider>
+
+  const register = async (dados) => {
+    setLoading(true);
+    const user = await UserService.register(dados);
+    console.log(user);
+    setUser(user.user);
+    localStorage.setItem('token',user.token);
+    setLoading(false);
+  }
+  return <UserContext.Provider value={{login,user,loading,register}}>{children}</UserContext.Provider>
 }

@@ -1,30 +1,54 @@
-import React from 'react'
-import { Container, Tittle, ContainerFormulario, ContainerInput,ButtonSubmit } from './style'
-  import InputValue from '../../../components/Form/input'
+import React from "react";
+import {
+  Container,
+  Tittle,
+  ContainerFormulario,
+  ContainerInput,
+  ButtonSubmit,
+} from "./style";
+import InputValue from "../../../components/Form/input";
+import { UserContext } from "../../../contexts/user";
 const Register = () => {
+  const [dados,setDados] = React.useState({
+    name: '',
+    email: '',
+    password: '',
+    passwordConfirm: '',
+    identificador: '',
+    cep: ''
+  });
+  const handleChange = ({target}) => { setDados({ [target.name]: target.value }) };
+  const { register } = React.useContext(UserContext);
+  const submit = async (e) => {
+    e.preventDefault();
+    register(dados);
+  }
   return (
     <Container>
       <Tittle>QUERO ME CADASTRAR</Tittle>
       <ContainerFormulario>
-        <ContainerInput>
-          <InputValue placeholder={'E-mail *'}/>
+      <ContainerInput onSubmit={submit}>
+          <InputValue onChange={handleChange} placeholder={"Name *"} name='name' value={dados.name}/>
         </ContainerInput>
         <ContainerInput>
-          <InputValue placeholder={'Crie sua senha *'} />
+          <InputValue onChange={handleChange} placeholder={"E-mail *"} name='email' value={dados.email}/>
         </ContainerInput>
         <ContainerInput>
-          <InputValue placeholder={'Confirme a senha *'}/>
+          <InputValue onChange={handleChange} placeholder={"Crie sua senha *"} name='password' value={dados.password}/>
         </ContainerInput>
         <ContainerInput>
-          <InputValue placeholder={'CPF ou CNPJ *'}/>
+          <InputValue onChange={handleChange} placeholder={"Confirme a senha *"} name='passwordConfirm' value={dados.passwordConfirm}/>
         </ContainerInput>
         <ContainerInput>
-          <InputValue placeholder={'CEP *'}/>
+          <InputValue onChange={handleChange} placeholder={"CPF ou CNPJ *"} name='identificador' value={dados.identificador}/>
+        </ContainerInput>
+        <ContainerInput>
+          <InputValue onChange={handleChange} placeholder={"CEP *"} name='cep' value={dados.cep}/>
         </ContainerInput>
         <ButtonSubmit> ENTRAR </ButtonSubmit>
       </ContainerFormulario>
     </Container>
-  )
-}
+  );
+};
 
-export default Register
+export default Register;
