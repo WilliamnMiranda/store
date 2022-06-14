@@ -1,19 +1,29 @@
 import React from 'react'
 import { Container, Tittle, ContainerFormulario, ContainerInput,ButtonSubmit, Recuperation, RecuperationText,
-  SocialsLogins,SubTittle, ButtonFacebook,ButtonGoogle,ContainerButtons } from './style'
+  SocialsLogins,SubTittle, ButtonFacebook,ButtonGoogle,ContainerButtons} from './style'
 import InputValue from '../../../components/Form/input'
+import UserService from '../../../services/user';
+import { UserContext } from '../../../contexts/user';
 const Login = () => {
+  const [email,setEmail] = React.useState('');
+  const [password,setPassword] = React.useState('');
+  const [user,setUser] = React.useState();
+  const {login} = React.useContext(UserContext);
+  const submit = async (e) => {
+    e.preventDefault();
+    login(email,password);
+  }
   return (
     <Container>
       <Tittle>JÁ TENHO CADASTRO</Tittle>
-      <ContainerFormulario>
+      <ContainerFormulario onSubmit={submit}>
         <ContainerInput>
-          <InputValue placeholder={'E-mail, CPF ou CNPJ *'}/>
+          <InputValue value={email} onChange={(e)=> setEmail(e.target.value)} placeholder={'E-mail, CPF ou CNPJ *'}/>
         </ContainerInput>
         <ContainerInput>
-          <InputValue placeholder={'Senha *'} />
+          <InputValue value={password} onChange={(e)=> setPassword(e.target.value)} placeholder={'Senha *'} />
         </ContainerInput>
-        <ButtonSubmit> ENTRAR </ButtonSubmit>
+        <ButtonSubmit type='submit'> ENTRAR </ButtonSubmit>
       </ContainerFormulario>
       <Recuperation>
         <RecuperationText>ESQUECI MEU LOGIN</RecuperationText>
