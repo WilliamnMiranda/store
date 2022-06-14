@@ -27,6 +27,7 @@ export const ContainerLogo = styled.div`
 `
 export const IconMenu = styled.li`
   font-size: 2.2em;
+  cursor: pointer;
   margin-right:15px;
 `
 export const Logo = styled.li``

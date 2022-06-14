@@ -2,7 +2,6 @@ import React from 'react'
 import { Container, Tittle, ContainerFormulario, ContainerInput,ButtonSubmit, Recuperation, RecuperationText,
   SocialsLogins,SubTittle, ButtonFacebook,ButtonGoogle,ContainerButtons} from './style'
 import InputValue from '../../../components/Form/input'
-import UserService from '../../../services/user';
 import { UserContext } from '../../../contexts/user';
 const Login = () => {
   const [email,setEmail] = React.useState('');

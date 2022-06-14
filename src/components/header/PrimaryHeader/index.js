@@ -1,19 +1,21 @@
 import React from 'react'
-import { Container,ContainerMenu, ContainerLista, ContainerLogo, ContainerInput, ContainerUser,IconMenu,Logo,ContainerLogin,
+import { Container,ContainerMenu, ContainerLista, ContainerLogo, ContainerInput, ContainerUser,IconMenu,ContainerLogin,
          ContainerLogoUser, ContainerAccess,ContainerIcons} from './style'
 import { FiMenu } from "react-icons/fi";
 import { ImUser } from "react-icons/im";
 import { FaHeadset , FaShoppingCart ,FaHeart } from "react-icons/fa";
 import { NavLink } from 'react-router-dom';
 import {UserContext} from '../../../contexts/user'
+import { DrawerContext } from '../../../contexts/drawer';
 const PrimaryHeader = () => {
   const {user,loading} = React.useContext(UserContext);
+  const {setStatusMenu} = React.useContext(DrawerContext);
   return (
     <Container>
       <ContainerMenu>
         <ContainerLista>
           <ContainerLogo>
-            <IconMenu> <FiMenu /> </IconMenu>
+            <IconMenu onClick={()=> setStatusMenu(true)}> <FiMenu /> </IconMenu>
             <NavLink to='/'>Store</NavLink>
           </ContainerLogo>
           <ContainerInput>
