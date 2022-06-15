@@ -16,7 +16,7 @@ const PrimaryHeader = () => {
         <ContainerLista>
           <ContainerLogo>
             <IconMenu onClick={()=> setStatusMenu(true)}> <FiMenu /> </IconMenu>
-            <NavLink to='/'>Store</NavLink>
+            <NavLink to='/store'>Store</NavLink>
           </ContainerLogo>
           <ContainerInput>
             <input placeholder='Busque aqui' />

@@ -4,17 +4,16 @@ import GlobalStyle from "./components/GlobalStyle/GlobalStyle";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Access from "./pages/Acess";
 import { UserStore } from "./contexts/user";
-import Drawer from "./components/Drawer";
-import { DrawerStore, DrawerContext } from "./contexts/drawer";
-import Layout from "./pages/Layout";
+import { DrawerStore } from "./contexts/drawer";
+import Layout from "./components/Layout";
 function App() {
   return (
     <BrowserRouter>
       <DrawerStore>
         <UserStore>
           <Layout>
-          <GlobalStyle />
-          <Header />
+            <GlobalStyle />
+            <Header />
             <Routes>
               <Route path="/store/login" element={<Access />} />
             </Routes>

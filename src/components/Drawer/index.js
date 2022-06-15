@@ -1,5 +1,14 @@
 import React from "react";
-import { FaUserAlt,FaShoppingCart,FaHeart,FaHeadset, FaHotjar,FaBolt,FaGem } from "react-icons/fa";
+import { NavLink } from 'react-router-dom'
+import {
+  FaUserAlt,
+  FaShoppingCart,
+  FaHeart,
+  FaHeadset,
+  FaHotjar,
+  FaBolt,
+  FaGem,
+} from "react-icons/fa";
 import {
   ContainerDrawer,
   DrawerComponent,
@@ -10,27 +19,54 @@ import {
   DrawerItem,
   ButtonLogin,
   ContainerLogin,
+  Dividir,
 } from "./style";
 import { DrawerContext } from "../../contexts/drawer";
+import { UserContext } from "../../contexts/user";
 const Drawer = () => {
   const { setStatusMenu } = React.useContext(DrawerContext);
+  const { user } = React.useContext(UserContext);
   return (
     <ContainerDrawer>
       <DrawerComponent>
         <CloseDrawer onClick={() => setStatusMenu(false)}> X </CloseDrawer>
-        <TituloDrawer>Ola.Faca seu login</TituloDrawer>
+        <TituloDrawer>Olá. Faça seu login</TituloDrawer>
         <DrawerNav>
           <DrawerList>
-            <DrawerItem> <FaUserAlt /> Minha conta </DrawerItem>
-            <DrawerItem> <FaShoppingCart /> Meus Pedidos </DrawerItem>
-            <DrawerItem> <FaHeart /> Favoritos </DrawerItem>
-            <DrawerItem> <FaHeadset /> Atendimento </DrawerItem>
-            <DrawerItem> <FaHotjar/> Mais Procurados </DrawerItem>
-            <DrawerItem> <FaBolt /> Oferta do dia </DrawerItem>
-            <DrawerItem> <FaGem /> Seja Premium </DrawerItem>
+            <DrawerItem>
+              <FaUserAlt /> Minha conta
+            </DrawerItem>
+            <DrawerItem>
+              <FaShoppingCart /> Meus Pedidos
+            </DrawerItem>
+            <DrawerItem>
+  
+              <FaHeart /> Favoritos
+            </DrawerItem>
+            <DrawerItem>
+              <FaHeadset /> Atendimento
+            </DrawerItem>
+            <Dividir />
+            <DrawerItem>
+
+              <FaHotjar /> Mais Procurados
+            </DrawerItem>
+            <DrawerItem>
+              <FaBolt /> Oferta do dia
+            </DrawerItem>
+            <Dividir />
+            <DrawerItem>
+              <FaGem /> Seja Premium
+            </DrawerItem>
             <ContainerLogin>
-              <ButtonLogin> Login </ButtonLogin>
-              <div> Cadastro </div>
+              {user ? (
+                <ButtonLogin> SAIR </ButtonLogin>
+              ) : (
+                <NavLink to="/store/login">
+                  <ButtonLogin> LOGIN </ButtonLogin>
+                  <div> Cadastro </div>
+                </NavLink>
+              )}
             </ContainerLogin>
           </DrawerList>
         </DrawerNav>

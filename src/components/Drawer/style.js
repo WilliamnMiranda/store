@@ -19,6 +19,7 @@ export const ContainerDrawer = styled.div`
 
 export const TituloDrawer = styled.h1`
     margin-bottom: 20px;
+    color: rgba(255,255,255);
 `;
 export const DrawerComponent = styled.aside`
   position: fixed;
@@ -31,16 +32,26 @@ export const DrawerComponent = styled.aside`
 export const DrawerNav = styled.nav``;
 export const DrawerList = styled.ul``;
 export const DrawerItem = styled.li`
-    color: white;
+    font-size: 0.9em;
+    font-weight: 500;
+    color: rgba(255,255,255,0.8);
     margin-bottom: 30px;
+    display: flex;
+    align-items: center;
+    svg{
+      margin-right: 10px;
+    }
 `;
 export const CloseDrawer = styled.div`
   position: absolute;
   top: 4%;
   left: 110%;
   color: white;
-  font-size: 1.5em;
+  font-size: 1.3em;
   cursor: pointer;
+  @media(max-width: 800px) {
+    left: 101%;
+  }
 `;
 export const ButtonLogin = styled.button`
   width: 100%;
@@ -72,4 +83,10 @@ export const ContainerLogin = styled.div`
         margin-top: 20px;
         font-size: 1.4em;
     }
+`
+export const Dividir= styled.div`
+  width: 100%;
+  height: 1px;
+  background-color: rgba(255,255,255,0.5);
+  margin-bottom: 20px;
 `
