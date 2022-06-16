@@ -29,7 +29,7 @@ const PrimaryHeader = () => {
                 <ContainerAccess>
                   {loading === true ? <div>carregando</div> : user ? user.name : (
                     <>
-                      <p>Faça <NavLink to='login'>Login</NavLink> ou</p>
+                      <p>Faça <NavLink to='/store/login'>Login</NavLink> ou</p>
                       <p>crie seu <bold><NavLink to='login'>Cadastro</NavLink></bold></p>
                     </>
                   )  
