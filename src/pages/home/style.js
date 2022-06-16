@@ -24,3 +24,12 @@ export const BannerHome = styled.section`
         width: 100%;
     }
 `
+
+export const ContainerMain = styled.section`
+    margin: 0 auto;
+    width: 93%;
+    position: relative;
+    top: -10px;
+    height: 500px;
+    background-color: white;
+`
