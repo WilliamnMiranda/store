@@ -1,7 +1,8 @@
 import styled from 'styled-components'
 
 export const ContainerHome = styled.main`
-    width: 100%;
+margin:0 auto;
+    width: 95%;
     background-color: #002156;
     height: 400px;
     ::after{
@@ -16,7 +17,7 @@ export const ContainerHome = styled.main`
     }
 `
 export const BannerHome = styled.section`
-    height: 330px;
+    height: 370px;
     width: 100%;
     img {
         object-fit: contain;
@@ -27,9 +28,9 @@ export const BannerHome = styled.section`
 
 export const ContainerMain = styled.section`
     margin: 0 auto;
-    width: 93%;
+    width: 94%;
     position: relative;
-    top: -10px;
+    top: -60px;
     height: 500px;
     background-color: white;
 `
