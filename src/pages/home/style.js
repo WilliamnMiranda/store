@@ -32,5 +32,9 @@ export const ContainerMain = styled.section`
     position: relative;
     top: -60px;
     height: 500px;
-    background-color: white;
+    background-color: #fafafb;
+`
+
+export const ContainerProdutos = styled.section`
+    width: 100%;
 `
