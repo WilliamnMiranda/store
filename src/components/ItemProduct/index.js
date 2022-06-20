@@ -1,10 +1,10 @@
 import React from 'react'
-
+import {ContainerProduct} from './style'
 const ItemProduct = ({product}) => {
   return (
-    <div>
+    <ContainerProduct>
         {product.name}
-    </div>
+    </ContainerProduct>
   )
 }
 

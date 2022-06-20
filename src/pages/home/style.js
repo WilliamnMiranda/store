@@ -31,10 +31,27 @@ export const ContainerMain = styled.section`
     width: 94%;
     position: relative;
     top: -60px;
-    height: 500px;
+    min-height: 500px;
     background-color: #fafafb;
+
+    ::after{
+        content: '';
+        width: 100%;
+        height: 100%;
+        top:0px;
+        left:0px;
+        z-index: -1000;
+        position: fixed;
+        background-color: #002156;
+    }
 `
 
 export const ContainerProdutos = styled.section`
     width: 100%;
+    background-color: red;
+    padding:10px;
+    display: flex;
+    align-items:center;
+    justify-content: flex-start;
+    flex-wrap: wrap;
 `
