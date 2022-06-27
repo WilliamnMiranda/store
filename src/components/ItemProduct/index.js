@@ -1,5 +1,5 @@
 import React from "react";
-import { ContainerProduct, HeaderProduct,ContainerPromo,Promo,Unidades } from "./style";
+import { ContainerProduct, HeaderProduct,ContainerPromo,Promo,Unidades,PhotoProduct,NameProduct,Values,LastValue,NewValue,ButtonCart} from "./style";
 import StarIcon from '@mui/icons-material/Star';
 import Rating from "@mui/material/Rating";
 const ItemProduct = ({ product }) => {
@@ -23,7 +23,23 @@ const ItemProduct = ({ product }) => {
           size="small"
         />
       </HeaderProduct>
-      {product.name}
+
+      <PhotoProduct>
+          <img src={ `https://api-store-application.herokuapp.com/${product.photo}`} alt='produto'/>
+      </PhotoProduct>
+      <NameProduct>
+        {product.name}
+      </NameProduct>
+
+      <Values>
+          <LastValue>R$499,99</LastValue>
+          <NewValue>R${product.price}</NewValue>
+          <p>A vista no pix</p>
+      </Values>
+
+      <ButtonCart>
+          COMPRAR
+      </ButtonCart>
     </ContainerProduct>
   );
 };
