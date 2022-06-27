@@ -81,6 +81,11 @@ color: grey;
 
 export const Values = styled.p`
   margin-top: 3%;
+  p{
+    font-size: 0.7em;
+    font-weight: 400;
+    color: rgb(127, 133, 141);
+  }
 `
 
 export const LastValue = styled.p`
@@ -96,5 +101,4 @@ export const NewValue = styled.p`
   font-weight: 700;
   color: rgb(255, 101, 0);
 `
-
 export const ButtonCart = styled.button``
