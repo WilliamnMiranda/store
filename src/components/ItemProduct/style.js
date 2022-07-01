@@ -14,13 +14,13 @@ export const ContainerProduct = styled.article`
     margin-left: 0px;
   }
 
-  & .MuiSvgIcon-root  {
-      font-size: 1.1em;
+  & .MuiSvgIcon-root {
+    font-size: 1.1em;
   }
 `;
 export const HeaderProduct = styled.div`
   width: 100%;
-  height: 50px;
+  height: 15%;
   display: flex;
   justify-content: space-between;
 `;
@@ -32,7 +32,7 @@ export const Promo = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  width:  45px;
+  width: 45px;
   height: 45px;
   background-color: #ff6500;
   color: white;
@@ -44,7 +44,7 @@ export const Unidades = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  width:  45px;
+  width: 45px;
   height: 45px;
   background-color: transparent;
   color: #ff6500;
@@ -69,36 +69,41 @@ export const PhotoProduct = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  img{
+  img {
     height: 80%;
     width: 80%;
   }
-`
+`;
 export const NameProduct = styled.p`
-font-weight: bold;
-color: grey;
-`
+  font-weight: bold;
+  color: grey;
+`;
 
 export const Values = styled.p`
-  margin-top: 3%;
-  p{
-    font-size: 0.7em;
-    font-weight: 400;
-    color: rgb(127, 133, 141);
-  }
-`
+  margin: 3% 0%;
+`;
 
 export const LastValue = styled.p`
-  font-size: 0.7em;
+  font-size: 0.8em;
   text-decoration: line-through;
   font-weight: 400;
   color: rgb(127, 133, 141);
-
-`
+`;
 
 export const NewValue = styled.p`
-  font-size: 1.3em;
+  font-size: 1.5em;
   font-weight: 700;
   color: rgb(255, 101, 0);
-`
-export const ButtonCart = styled.button``
+`;
+export const InfoPix = styled.p`
+  font-size: 0.9em;
+  font-weight: 400;
+  color: rgb(127, 133, 141);
+`;
+export const ButtonCart = styled.button`
+  background-color: rgb(255, 101, 0);
+  border: none;
+  outline: none;
+  width: 100%;
+  height:8%;
+`;

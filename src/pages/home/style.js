@@ -17,12 +17,11 @@ export const ContainerHome = styled.main`
     }
 `
 export const BannerHome = styled.section`
-    height: 370px;
-    width: 100%;
     img {
+        width: 100%;
+        height: 100%;
         object-fit: contain;
         object-position: center top;
-        width: 100%;
     }
 `
 

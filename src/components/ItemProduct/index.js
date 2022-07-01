@@ -1,5 +1,5 @@
 import React from "react";
-import { ContainerProduct, HeaderProduct,ContainerPromo,Promo,Unidades,PhotoProduct,NameProduct,Values,LastValue,NewValue,ButtonCart} from "./style";
+import { ContainerProduct, HeaderProduct,ContainerPromo,Promo,Unidades,PhotoProduct,NameProduct,Values,LastValue,NewValue,ButtonCart,InfoPix} from "./style";
 import StarIcon from '@mui/icons-material/Star';
 import Rating from "@mui/material/Rating";
 const ItemProduct = ({ product }) => {
@@ -34,7 +34,7 @@ const ItemProduct = ({ product }) => {
       <Values>
           <LastValue>R$499,99</LastValue>
           <NewValue>R${product.price}</NewValue>
-          <p>A vista no pix</p>
+          <InfoPix>A vista no pix</InfoPix>
       </Values>
 
       <ButtonCart>
