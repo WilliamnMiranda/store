@@ -15,6 +15,9 @@ export const ContainerHome = styled.main`
         width: 100%;
         height: 100%;
     }
+    @media(max-width: 800px) {
+    left: 100%;
+  }
 `
 export const BannerHome = styled.section`
     img {
@@ -29,7 +32,7 @@ export const ContainerMain = styled.section`
     margin: 0 auto;
     width: 94%;
     position: relative;
-    top: -60px;
+    top: -50px;
     min-height: 500px;
     background-color: #fafafb;
 
@@ -51,6 +54,6 @@ export const ContainerProdutos = styled.section`
     padding:10px;
     display: flex;
     align-items:center;
-    justify-content: flex-start;
+    justify-content: center;
     flex-wrap: wrap;
 `

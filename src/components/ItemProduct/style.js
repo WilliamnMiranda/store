@@ -2,18 +2,11 @@ import styled from "styled-components";
 
 export const ContainerProduct = styled.article`
   padding: 5px;
-  width: 214px;
+  width: 218px;
   height: 400px;
   background-color: white;
   margin-bottom: 10px;
-  margin-left: 11px;
-  :first-child {
-    margin-left: 0px;
-  }
-  :nth-child(7n) {
-    margin-left: 0px;
-  }
-
+  margin-left: 5px;
   & .MuiSvgIcon-root {
     font-size: 1.1em;
   }

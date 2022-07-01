@@ -3,6 +3,7 @@ import { ContainerProduct, HeaderProduct,ContainerPromo,Promo,Unidades,PhotoProd
 import StarIcon from '@mui/icons-material/Star';
 import Rating from "@mui/material/Rating";
 const ItemProduct = ({ product }) => {
+  console.log(product)
   return (
     <ContainerProduct>
       <HeaderProduct>
