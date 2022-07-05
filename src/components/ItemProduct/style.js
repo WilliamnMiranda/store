@@ -99,4 +99,5 @@ export const ButtonCart = styled.button`
   outline: none;
   width: 100%;
   height:8%;
+  cursor: pointer;
 `;
