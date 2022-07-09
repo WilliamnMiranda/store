@@ -7,7 +7,8 @@ import {
   ContainerValorProduto,
   NameProduct,
   ContainerInfosProdutoAdicionado,
-  MessageProduct
+  MessageProduct,
+  Parcelas
 } from "./style";
 import { useParams } from "react-router";
 import productServices from "../../services/product";
@@ -21,6 +22,9 @@ const PrevCart = () => {
   React.useEffect(() => {
     getProduct();
   }, []);
+  const JUROS = 1;
+  const INCREASED = JUROS / 100 * 700
+  const TERM_VALUE = ((product.price + INCREASED) / 12).toFixed(2);
   return (
     <Container>
       <ContainerProdutoAdicionado>
@@ -33,7 +37,12 @@ const PrevCart = () => {
             <NameProduct>{product.name}</NameProduct>
           </ContainerNomeProduto>
 
-          <ContainerValorProduto></ContainerValorProduto>
+          <ContainerValorProduto>
+              <Parcelas>
+                  <p>12x R$ {TERM_VALUE}</p>
+                  <p>(A prazo: R$: {product.price + INCREASED})</p>
+              </Parcelas>
+          </ContainerValorProduto>
 
         </ContainerInfosProdutoAdicionado>
 

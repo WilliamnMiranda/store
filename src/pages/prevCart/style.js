@@ -50,3 +50,5 @@ export const MessageProduct = styled.p`
   justify-content: center;
   align-items: center;
 `;
+
+export const Parcelas = styled.div``
