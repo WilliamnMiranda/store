@@ -7,6 +7,7 @@ import { UserStore } from "./contexts/user";
 import { DrawerStore } from "./contexts/drawer";
 import Layout from "./components/Layout";
 import HomePage from "./pages/home";
+import PrevCart from "./pages/prevCart";
 function App() {
   return (
     <BrowserRouter>
@@ -16,8 +17,9 @@ function App() {
           <Layout>
             <GlobalStyle />
             <Routes>
-              <Route path="/store/login" element={<Access />} />
               <Route path="/store" element={<HomePage />} />
+              <Route path="/store/login" element={<Access />} />
+              <Route path="/store/product/:id" element={<PrevCart />} />
             </Routes>
           </Layout>
         </UserStore>
