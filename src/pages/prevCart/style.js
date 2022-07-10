@@ -5,9 +5,10 @@ export const Container = styled.main`
   width: 100%;
 `;
 export const ContainerProdutoAdicionado = styled.div`
-  width: 100%;
+  width: 80%;
   height: 200px;
   background-color: white;
+  margin: 0 auto;
   padding: 20px;
 `;
 export const ContainerInfosProdutoAdicionado = styled.section`
@@ -33,8 +34,10 @@ export const ContainerNomeProduto = styled.div`
 `;
 export const ContainerValorProduto = styled.div`
   height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
   width: 30%;
-  background-color: red;
 `;
 
 export const NameProduct = styled.p`
@@ -49,6 +52,38 @@ export const MessageProduct = styled.p`
   display: flex;
   justify-content: center;
   align-items: center;
+  color: green;
+  div{
+    height: 25px;
+    width: 25px;
+    border-radius: 50%;
+    background-color: green;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right:5px;
+  }
+  span{
+    font-size: 0.7em;
+    color:white;
+    position: relative;
+    top:2px;
+  }
 `;
 
-export const Parcelas = styled.div``
+export const Parcelas = styled.div`
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  border-right: 1px solid red;
+  color: rgb(86, 92, 105);
+`
+
+export const Avista= styled.div`
+  color: #FC6B0F;
+  padding: 20px;
+  div{
+    font-size: 1.5em;
+  }
+`
