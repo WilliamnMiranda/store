@@ -31,6 +31,9 @@ export const ContainerNomeProduto = styled.div`
   flex-direction: column;
   align-items: flex-start;
   justify-content: center;
+  span {
+    color: grey;
+  }
 `;
 export const ContainerValorProduto = styled.div`
   height: 100%;
@@ -41,9 +44,10 @@ export const ContainerValorProduto = styled.div`
 `;
 
 export const NameProduct = styled.p`
-  margin-top: 20px;
+  margin-top: 10px;
   font-size: 1.3em;
   font-weight: bold;
+  color: rgb(66, 70, 77);
 `;
 
 export const MessageProduct = styled.p`

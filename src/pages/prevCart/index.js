@@ -35,7 +35,7 @@ const PrevCart = () => {
           <ContainerFotoProduto> </ContainerFotoProduto>
 
           <ContainerNomeProduto>
-            <p>Huskey gamimg Brasil</p>
+            <span>Huskey gamimg Brasil</span>
             <NameProduct>{product.name}</NameProduct>
           </ContainerNomeProduto>
 
