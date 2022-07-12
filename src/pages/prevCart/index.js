@@ -41,8 +41,8 @@ const PrevCart = () => {
 
           <ContainerValorProduto>
             <Parcelas>
-                <p> <strong> 12x R$ {TERM_VALUE} </strong> </p>
-                <p> <strong> (A prazo: R$: {product.price + INCREASED}) </strong> </p>
+              <p> <strong> 12x R$ {TERM_VALUE} </strong> </p>
+              <p> <strong> (A prazo: R$: {product.price + INCREASED}) </strong> </p>
             </Parcelas>
 
             <Avista>
