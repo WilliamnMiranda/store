@@ -1,5 +1,4 @@
 import styled from "styled-components";
-
 export const Container = styled.main`
   margin-top: 60px;
   width: 100%;
@@ -84,10 +83,117 @@ export const Parcelas = styled.div`
   color: rgb(86, 92, 105);
 `
 
-export const Avista= styled.div`
+export const Avista = styled.div`
   color: #FC6B0F;
   padding: 20px;
   div{
     font-size: 1.5em;
+  }
+`
+export const ContainerText = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  padding:40px;
+  width: 100%;
+`
+export const TextInfo = styled.span`
+  color:#42464D;
+  font-size: 1.4em;
+  span {
+    color: #FC6B0F;;
+  }
+`
+
+export const ContainerServicos = styled.section`
+  width: 80%;
+  margin: 0 auto;
+  padding:0px 20px 20px 20px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  height: 450px;
+  background-color: transparent;
+`
+export const ContainerAdicionarServico = styled.div`
+  background-color: white;
+  height: 100%;
+  width: 72%;
+  padding:15px;
+`
+export const ContainerValoresServico = styled.div`
+  background-color: white;
+  height: 100%;
+  width: 25%;
+`
+export const ContainerTittle = styled.div`
+  display:flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  height: 40px;
+  h1{
+    color: rgb(66, 70, 77);
+  }
+  div{
+    display: flex;
+    align-items: center;
+  }
+  span{
+      margin-right: 10px;
+      color: #FC6B0F;
+      font-size:1.5em;
+    }
+`
+export const ContainerInfoGarantia = styled.div`
+  width: 100%;
+  color: #565C69;
+  margin-top: 10px;
+  font-weight: 400;
+`
+export const ContainerGarantias = styled.section`
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 10px;
+`
+export const Garantia = styled.article`
+  padding: 40px 10px;
+  border:1px solid rgba(1,1,1,0.2);
+  width: 180px;
+  height: 240px;
+  margin-left: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  :first-child{
+    margin-left: 0px;
+  }
+`
+export const TempoGarantia = styled.div`
+  font-size: 0.8em;
+  display: flex;
+  justify-content: center;
+  color: #FC6B0F;
+`
+export const ParcelasGarantiga = styled.div`
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+`
+export const ValorGarantias = styled.div`
+text-align: center;
+color:#565C69;
+font-size: 1.5em;
+`
+
+export const SelecionarGarantia = styled.div`
+  text-align: center;
+  input{
+    width: 20px;
+    height: 20px;
   }
 `
