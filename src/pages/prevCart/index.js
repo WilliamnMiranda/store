@@ -1,5 +1,5 @@
 import React from "react";
-import { FaCheck, FaMedal, FaAngleUp } from "react-icons/fa";
+import { FaCheck, FaMedal, FaAngleUp, FaCog } from "react-icons/fa";
 import {
   Container,
   ContainerProdutoAdicionado,
@@ -23,7 +23,15 @@ import {
   TempoGarantia,
   ParcelasGarantiga,
   ValorGarantias,
-  SelecionarGarantia
+  SelecionarGarantia,
+  ContainerTittleValoresServico,
+  ContainerValorGarantia,
+  ContainerValorTotalServicos,
+  ContainerButton,
+  ButtonComprar,
+  ButtonContinuar,
+  ValorTotal,
+  ValorGarantia
 } from "./style";
 import { useParams } from "react-router";
 import productServices from "../../services/product";
@@ -81,7 +89,7 @@ const PrevCart = () => {
           <ContainerTittle>
             <div>
               <span> <FaMedal /></span>
-              <h1>Garantia estendida</h1>
+              <h2>Garantia estendida</h2>
             </div>
             <span> <FaAngleUp /></span>
           </ContainerTittle>
@@ -136,7 +144,34 @@ const PrevCart = () => {
             </Garantia>
           </ContainerGarantias>
         </ContainerAdicionarServico>
-        <ContainerValoresServico></ContainerValoresServico>
+
+        <ContainerValoresServico>
+          <ContainerTittleValoresServico>
+              <span><FaCog /></span>
+              <h2>Servicos</h2>
+          </ContainerTittleValoresServico>
+
+          <ContainerValorGarantia> 
+            <p>
+              <span>Garantia Estendida</span> 
+              <ValorGarantia> <strong> R$ 0,00 </strong> </ValorGarantia>
+            </p>
+            <p>
+              <span>Taxas e juros</span> 
+              <ValorGarantia> <strong> R$ 0,00 </strong> </ValorGarantia>
+            </p>
+          </ContainerValorGarantia>
+
+          <ContainerValorTotalServicos>
+            <span>valor total dos servicos</span>
+            <ValorTotal> <strong> R$ 304,01 </strong> </ValorTotal>
+          </ContainerValorTotalServicos> 
+
+          <ContainerButton>
+            <ButtonComprar> IR PARA O CARRINHO </ButtonComprar>
+            <ButtonContinuar> CONTINUAR COMPRANDO </ButtonContinuar>  
+          </ContainerButton>       
+        </ContainerValoresServico>
       </ContainerServicos>
     </Container>
   );

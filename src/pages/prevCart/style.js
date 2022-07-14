@@ -125,6 +125,7 @@ export const ContainerAdicionarServico = styled.div`
 export const ContainerValoresServico = styled.div`
   background-color: white;
   height: 100%;
+  padding: 20px;
   width: 25%;
 `
 export const ContainerTittle = styled.div`
@@ -133,7 +134,7 @@ export const ContainerTittle = styled.div`
   align-items: center;
   justify-content: space-between;
   height: 40px;
-  h1{
+  h2{
     color: rgb(66, 70, 77);
   }
   div{
@@ -197,3 +198,54 @@ export const SelecionarGarantia = styled.div`
     height: 20px;
   }
 `
+
+export const ContainerTittleValoresServico = styled.div`
+  display: flex;
+  align-items: center;
+  height: 40px;
+  span{
+      margin-right: 10px;
+      color: #FC6B0F;
+      font-size:1.5em;
+      margin-top: 2%;
+    }
+  h2{
+    padding:0px;
+    margin: 0px;
+    color: rgb(66, 70, 77);
+  }
+`
+
+export const ContainerValorGarantia = styled.div`
+margin-bottom: 25px;
+  p{
+    font-size: 0.8em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0px;
+    border-bottom: 1px solid #DEE0E4;
+  }
+`
+export const ValorGarantia = styled.span`
+  font-size: 1.5em;
+`
+export const ContainerValorTotalServicos = styled.div`
+  padding: 15px;
+  width: 100%;
+  background-color: rgb(229, 255, 241);
+  span{
+    color: #1F9050;
+    font-size: 0.8em;
+  }
+`
+export const ValorTotal = styled.p`
+width: 100%;
+display: flex;
+justify-content: flex-end;
+color:#1F9050;
+font-size: 1.7em;
+`
+export const ContainerButton = styled.div``
+export const ButtonComprar = styled.button``
+export const ButtonContinuar = styled.button``
