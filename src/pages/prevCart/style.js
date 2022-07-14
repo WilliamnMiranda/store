@@ -245,6 +245,27 @@ justify-content: flex-end;
 color:#1F9050;
 font-size: 1.7em;
 `
-export const ContainerButton = styled.div``
-export const ButtonComprar = styled.button``
-export const ButtonContinuar = styled.button``
+export const ContainerButton = styled.div`
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+  button{
+    width: 100%;
+    padding:10px;
+    height: 45px;
+    cursor: pointer;
+  }
+`
+export const ButtonComprar = styled.button`
+  border: none;
+  outline: none;
+  color: white;
+  font-weight: bold;
+  background-color: #FF6500;
+  margin-bottom: 20px;
+`
+export const ButtonContinuar = styled.button`
+border: 1px solid #FF6500;
+color:#FF6500;
+background-color: white;
+`
