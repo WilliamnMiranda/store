@@ -109,7 +109,6 @@ export const TextInfo = styled.span`
 export const ContainerServicos = styled.section`
   width: 80%;
   margin: 0 auto;
-  padding:0px 20px 20px 20px;
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
