@@ -44,7 +44,7 @@ const Register = () => {
           <InputValue onChange={handleChange} placeholder={"CPF ou CNPJ *"} name='identificador' value={dados.identificador}/>
         </ContainerInput>
         <ContainerInput>
-          <InputValue onChange={handleChange} placeholder={"CEP *"} name='cep' value={dados.cep}/>
+          <InputValue onChange={handleChange} placeholder={"CEP  *"} name='cep' value={dados.cep}/>
         </ContainerInput>
         <ButtonSubmit> ENTRAR </ButtonSubmit>
       </ContainerFormulario>
