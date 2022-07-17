@@ -53,7 +53,7 @@ const ItemProduct = ({ product }) => {
         <InfoPix>A vista no pix</InfoPix>
       </Values>
 
-      <NavLink to={`/store/product/${product._id}`}>
+      <NavLink to={`/product/${product._id}`}>
         <ButtonCart>COMPRAR</ButtonCart>
       </NavLink>
     </ContainerProduct>
