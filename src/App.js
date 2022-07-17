@@ -17,9 +17,9 @@ function App() {
           <Layout>
             <GlobalStyle />
             <Routes>
-              <Route path="/store" element={<HomePage />} />
-              <Route path="/store/login" element={<Access />} />
-              <Route path="/store/product/:id" element={<PrevCart />} />
+              <Route path="/" element={<HomePage />} />
+              <Route path="/login" element={<Access />} />
+              <Route path="/product/:id" element={<PrevCart />} />
             </Routes>
           </Layout>
         </UserStore>
