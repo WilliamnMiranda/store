@@ -62,7 +62,7 @@ const Drawer = () => {
               {user ? (
                 <ButtonLogin> SAIR </ButtonLogin>
               ) : (
-                <NavLink to="/store/login">
+                <NavLink to="/login">
                   <ButtonLogin> LOGIN </ButtonLogin>
                   <div> Cadastro </div>
                 </NavLink>
