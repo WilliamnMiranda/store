@@ -59,7 +59,6 @@ export const ContainerValorProduto = styled.div`
   justify-content: flex-start;
   width: 30%;
   @media(max-width: 800px){
-
     width: 100%;
   }
 `;
@@ -136,18 +135,31 @@ export const ContainerServicos = styled.section`
   justify-content: space-between;
   height: 450px;
   background-color: transparent;
+  @media(max-width: 800px){
+    width: 100%;
+    flex-direction: column;
+    background-color: red;
+    height: auto;
+  }
 `
 export const ContainerAdicionarServico = styled.div`
   background-color: white;
   height: 100%;
   width: 72%;
   padding:15px;
+  @media(max-width: 800px){
+    width: 100%;
+    margin-bottom: 10px;
+  }
 `
 export const ContainerValoresServico = styled.div`
   background-color: white;
   height: 100%;
   padding: 20px;
   width: 25%;
+  @media(max-width: 800px){
+    width: 100%;
+  }
 `
 export const ContainerTittle = styled.div`
   display:flex;
