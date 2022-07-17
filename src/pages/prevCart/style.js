@@ -2,6 +2,9 @@ import styled from "styled-components";
 export const Container = styled.main`
   margin-top: 60px;
   width: 100%;
+  @media(max-width: 800px) {
+    margin-top: 20px;
+  }
 `;
 export const ContainerProdutoAdicionado = styled.div`
   width: 80%;
@@ -9,18 +12,32 @@ export const ContainerProdutoAdicionado = styled.div`
   background-color: white;
   margin: 0 auto;
   padding: 20px;
+  @media(max-width: 800px) {
+    width: 100%;
+    height: 450px;
+  }
 `;
 export const ContainerInfosProdutoAdicionado = styled.section`
   display: flex;
   width: 100%;
   height: 90%;
+  @media(max-width: 800px) {
+    flex-direction: column;
+  }
 `;
 
 export const ContainerFotoProduto = styled.div`
   height: 100%;
   width: 20%;
-  background-color: red;
   margin-right: 10px;
+  background-color: red;
+  @media(max-width: 800px) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-right: 0px;
+  }
 `;
 export const ContainerNomeProduto = styled.div`
   height: 100%;
@@ -33,6 +50,10 @@ export const ContainerNomeProduto = styled.div`
   span {
     color: grey;
   }
+  @media(max-width: 800px){
+    width: 100%;
+    align-items: center;
+  }
 `;
 export const ContainerValorProduto = styled.div`
   height: 100%;
@@ -40,6 +61,10 @@ export const ContainerValorProduto = styled.div`
   align-items: center;
   justify-content: flex-start;
   width: 30%;
+  @media(max-width: 800px){
+    width: 100%;
+    justify-content: center;
+  }
 `;
 
 export const NameProduct = styled.p`
@@ -79,7 +104,7 @@ export const Parcelas = styled.div`
   display: flex;
   align-items: center;
   flex-direction: column;
-  border-right: 1px solid red;
+  border-right: 1px solid #FC6B0F;
   color: rgb(86, 92, 105);
 `
 
@@ -114,18 +139,30 @@ export const ContainerServicos = styled.section`
   justify-content: space-between;
   height: 450px;
   background-color: transparent;
+  @media(max-width: 800px){
+    width: 100%;
+    flex-direction: column;
+    height: auto;
+  }
 `
 export const ContainerAdicionarServico = styled.div`
   background-color: white;
   height: 100%;
   width: 72%;
   padding:15px;
+  @media(max-width: 800px){
+    width: 100%;
+    margin-bottom: 10px;
+  }
 `
 export const ContainerValoresServico = styled.div`
   background-color: white;
   height: 100%;
   padding: 20px;
   width: 25%;
+  @media(max-width: 800px){
+    width: 100%;
+  }
 `
 export const ContainerTittle = styled.div`
   display:flex;
@@ -157,6 +194,9 @@ export const ContainerGarantias = styled.section`
   align-items: center;
   justify-content: center;
   margin-top: 10px;
+  @media(max-width: 800px){
+    flex-wrap: wrap;
+  }
 `
 export const Garantia = styled.article`
   padding: 40px 10px;
@@ -169,6 +209,10 @@ export const Garantia = styled.article`
   justify-content: space-between;
   :first-child{
     margin-left: 0px;
+  }
+  @media(max-width: 800px){
+    margin-left: 0px;
+    width: 45%;
   }
 `
 export const TempoGarantia = styled.div`
