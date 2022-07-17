@@ -9,11 +9,18 @@ export const ContainerProdutoAdicionado = styled.div`
   background-color: white;
   margin: 0 auto;
   padding: 20px;
+  @media(max-width: 800px) {
+    width: 100%;
+    height: 500px;
+  }
 `;
 export const ContainerInfosProdutoAdicionado = styled.section`
   display: flex;
   width: 100%;
   height: 90%;
+  @media(max-width: 800px) {
+    flex-direction: column;
+  }
 `;
 
 export const ContainerFotoProduto = styled.div`
@@ -21,6 +28,13 @@ export const ContainerFotoProduto = styled.div`
   width: 20%;
   background-color: red;
   margin-right: 10px;
+  @media(max-width: 800px) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-right: 0px;
+  }
 `;
 export const ContainerNomeProduto = styled.div`
   height: 100%;
@@ -33,6 +47,10 @@ export const ContainerNomeProduto = styled.div`
   span {
     color: grey;
   }
+  @media(max-width: 800px){
+    width: 100%;
+    text-align: center;
+  }
 `;
 export const ContainerValorProduto = styled.div`
   height: 100%;
@@ -40,6 +58,10 @@ export const ContainerValorProduto = styled.div`
   align-items: center;
   justify-content: flex-start;
   width: 30%;
+  @media(max-width: 800px){
+
+    width: 100%;
+  }
 `;
 
 export const NameProduct = styled.p`
