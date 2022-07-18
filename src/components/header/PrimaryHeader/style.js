@@ -78,10 +78,9 @@ export const ContainerAccess = styled.div`
    font-size: 0.8em;
  }
 `
-
 export const ContainerIcons = styled.div`
+  display: flex;
   & svg{
-    margin:0px 20px;
     font-size: 1.4em;
   }
 `
