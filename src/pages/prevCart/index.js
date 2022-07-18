@@ -35,6 +35,7 @@ import {
 } from "./style";
 import { useParams } from "react-router";
 import productServices from "../../services/product";
+import cartServices from "../../services/cart";
 const PrevCart = () => {
   const { id } = useParams();
   const [product, setProductCart] = React.useState({});
@@ -44,6 +45,7 @@ const PrevCart = () => {
   };
   React.useEffect(() => {
     getProduct();
+    cartServices.post(product);
   }, []);
   const JUROS = 1;
   const INCREASED = JUROS / 100 * 700
