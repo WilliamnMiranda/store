@@ -17,7 +17,7 @@ import StarIcon from "@mui/icons-material/Star";
 import Rating from "@mui/material/Rating";
 import { NavLink } from "react-router-dom";
 const ItemProduct = ({ product }) => {
-  console.log(product);
+  console.log(product)
   return (
     <ContainerProduct>
       <HeaderProduct>
@@ -53,7 +53,7 @@ const ItemProduct = ({ product }) => {
         <InfoPix>A vista no pix</InfoPix>
       </Values>
 
-      <NavLink to={`/product/${product._id}`}>
+      <NavLink to={ localStorage.getItem('token') ? `/product/${product._id} ` : `/login`}>
         <ButtonCart>COMPRAR</ButtonCart>
       </NavLink>
     </ContainerProduct>
