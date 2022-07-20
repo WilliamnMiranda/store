@@ -12,7 +12,6 @@ const HomePage = () => {
   React.useEffect(() => {
     getProducts();
   }, []);
-  console.log(listProducts);
   return (
     <ContainerHome>
       <BannerHome>

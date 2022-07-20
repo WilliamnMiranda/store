@@ -16,7 +16,6 @@ const cartServices = {
                 "x-access-token" : token
             }
         })
-        console.log(data)
         return data;
     }
 }

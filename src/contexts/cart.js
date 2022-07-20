@@ -5,13 +5,15 @@ export const CartContext = React.createContext();
 export const CartStore = ({children}) => {
   const [cart,setCart] = React.useState([]);
 
-  const addToCart = async (product) => {
-    cartServices.post(product)
-  }
-
-  const getItemsFromCart = async () => {
+  const getItemsFromCart = React.useCallback(async () => {
     const productsCart = await cartServices.get();
     setCart(productsCart);
+  },[cart])
+
+  const addToCart = async (product) => {
+    cartServices.post(product)
+    getItemsFromCart()
+    console.log(cart.length)
   }
 
   React.useEffect(()=>{

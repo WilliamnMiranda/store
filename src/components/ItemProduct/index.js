@@ -16,8 +16,9 @@ import {
 import StarIcon from "@mui/icons-material/Star";
 import Rating from "@mui/material/Rating";
 import { NavLink } from "react-router-dom";
+import { CartContext } from "../../contexts/cart";
 const ItemProduct = ({ product }) => {
-  console.log(product)
+  const { addToCart } = React.useContext(CartContext)
   return (
     <ContainerProduct>
       <HeaderProduct>
@@ -54,7 +55,7 @@ const ItemProduct = ({ product }) => {
       </Values>
 
       <NavLink to={ localStorage.getItem('token') ? `/product/${product._id} ` : `/login`}>
-        <ButtonCart>COMPRAR</ButtonCart>
+        <ButtonCart onClick={()=> addToCart(product)}>COMPRAR</ButtonCart>
       </NavLink>
     </ContainerProduct>
   );

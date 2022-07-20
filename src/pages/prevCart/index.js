@@ -35,26 +35,18 @@ import {
 } from "./style";
 import { useParams } from "react-router";
 import productServices from "../../services/product";
-import cartServices from "../../services/cart";
-import { CartContext } from "../../contexts/cart";
 const PrevCart = () => {
   const { id } = useParams();
   const [product, setProductCart] = React.useState({});
-  const { addToCart } = React.useContext(CartContext)
   const getProduct = async () =>{
     const produto = await productServices.getProductById(id);
     setProductCart(produto);
   }
-  const pickUpProduct = async () => {
-    const produto = await productServices.getProductById(id);
-    addToCart(produto)
-  }
+
   React.useEffect(()=>{
     getProduct()
-    return () => {
-      pickUpProduct()
-    }
   },[])
+  
   const JUROS = 1;
   const INCREASED = JUROS / 100 * 700
   const TERM_VALUE = ((product.price + INCREASED) / 12).toFixed(2);
