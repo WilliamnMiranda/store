@@ -1,15 +1,22 @@
 import Api from './Api'
 const router = '/cart'
+const token = localStorage.getItem('token')
 const cartServices = {
     post: async(product) => {
-        await Api.post(router,{product},{
+        const produto = await Api.post(router,{product},{
             headers:{
-                "x-access-token" : localStorage.getItem('token')
+                "x-access-token" : token
             }
         });
+        console.log(produto)
     },
-    getProductById: async(productId) =>{
-        const {data} = await Api.get(`${router}/${productId}`)
+    get: async() => {
+        const { data } = await Api.get(router,{
+            headers:{
+                "x-access-token" : token
+            }
+        })
+        console.log(data)
         return data;
     }
 }

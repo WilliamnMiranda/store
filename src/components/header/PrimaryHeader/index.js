@@ -1,7 +1,7 @@
 import React from 'react'
 import {
   Container, ContainerMenu, ContainerLista, ContainerLogo, ContainerInput, ContainerUser, IconMenu, ContainerLogin,
-  ContainerLogoUser, ContainerAccess, ContainerIcons, QuantidadeCarrinho
+  ContainerLogoUser, ContainerAccess, ContainerIcons
 } from './style'
 import { FiMenu } from "react-icons/fi";
 import Badge from '@mui/material/Badge';
@@ -10,9 +10,11 @@ import { FaHeadset, FaShoppingCart, FaHeart } from "react-icons/fa";
 import { NavLink } from 'react-router-dom';
 import { UserContext } from '../../../contexts/user'
 import { DrawerContext } from '../../../contexts/drawer';
+import { CartContext } from '../../../contexts/cart';
 const PrimaryHeader = () => {
   const { user, loading } = React.useContext(UserContext);
   const { setStatusMenu } = React.useContext(DrawerContext);
+  const { cart } = React.useContext(CartContext)
   return (
     <Container>
       <ContainerMenu>
@@ -40,13 +42,13 @@ const PrimaryHeader = () => {
               </ContainerAccess>
 
               <ContainerIcons>
-                <div style={{marginRight: '20px'}}>
+                <div style={{ marginRight: '20px' }}>
                   <FaHeadset />
                 </div>
-                <div style={{marginRight: '20px'}}>
+                <div style={{ marginRight: '20px' }}>
                   <FaHeart />
                 </div>
-                <Badge badgeContent={4} color="secondary">
+                <Badge badgeContent={cart.length} color="secondary">
                   <FaShoppingCart />
                 </Badge>
               </ContainerIcons>
