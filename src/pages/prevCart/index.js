@@ -38,13 +38,15 @@ import productServices from "../../services/product";
 const PrevCart = () => {
   const { id } = useParams();
   const [product, setProductCart] = React.useState({});
-  const getProduct = async () => {
-    const product = await productServices.getProductById(id);
-    setProductCart(product);
-  };
-  React.useEffect(() => {
-    getProduct();
-  }, []);
+  const getProduct = async () =>{
+    const produto = await productServices.getProductById(id);
+    setProductCart(produto);
+  }
+
+  React.useEffect(()=>{
+    getProduct()
+  },[])
+  
   const JUROS = 1;
   const INCREASED = JUROS / 100 * 700
   const TERM_VALUE = ((product.price + INCREASED) / 12).toFixed(2);
@@ -147,17 +149,17 @@ const PrevCart = () => {
 
         <ContainerValoresServico>
           <ContainerTittleValoresServico>
-              <span><FaCog /></span>
-              <h2>Servicos</h2>
+            <span><FaCog /></span>
+            <h2>Servicos</h2>
           </ContainerTittleValoresServico>
 
-          <ContainerValorGarantia> 
+          <ContainerValorGarantia>
             <p>
-              <span>Garantia Estendida</span> 
+              <span>Garantia Estendida</span>
               <ValorGarantia> <strong> R$ 0,00 </strong> </ValorGarantia>
             </p>
             <p>
-              <span>Taxas e juros</span> 
+              <span>Taxas e juros</span>
               <ValorGarantia> <strong> R$ 0,00 </strong> </ValorGarantia>
             </p>
           </ContainerValorGarantia>
@@ -165,12 +167,12 @@ const PrevCart = () => {
           <ContainerValorTotalServicos>
             <span>valor total dos servicos</span>
             <ValorTotal> <strong> R$ 304,01 </strong> </ValorTotal>
-          </ContainerValorTotalServicos> 
+          </ContainerValorTotalServicos>
 
           <ContainerButton>
             <ButtonComprar> IR PARA O CARRINHO </ButtonComprar>
-            <ButtonContinuar> CONTINUAR COMPRANDO </ButtonContinuar>  
-          </ContainerButton>       
+            <ButtonContinuar> CONTINUAR COMPRANDO </ButtonContinuar>
+          </ContainerButton>
         </ContainerValoresServico>
       </ContainerServicos>
     </Container>

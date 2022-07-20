@@ -31,11 +31,8 @@ export const UserStore = ({children}) => {
   }
 
   const register = async (dados) => {
-    console.log('entrei');
-    console.log(dados)
     setLoading(true);
     const user = await UserService.register(dados);
-    console.log(user);
     setUser(user.user);
     localStorage.setItem('token',user.token);
     setLoading(false);
