@@ -1,10 +1,13 @@
 import React from 'react'
 import { CartContext } from '../../contexts/cart'
-import { ContainerCart,ContainerBuscaDeLocalidade,ContainerBuscar,ContainerMain,Aside,SectionMain,Endereco,ContainerProdutos} from './style'
-import { FaMapMarkerAlt } from "react-icons/fa";
+import {
+  ContainerCart, ContainerBuscaDeLocalidade, ContainerBuscar, ContainerMain, Aside, SectionMain, Endereco, ContainerProdutos,
+  TittleProdutos
+} from './style'
+import { FaMapMarkerAlt, FaStore, FaTrash } from "react-icons/fa";
 import TimeLine from './timeLine'
 const Cart = () => {
-  const { cart }  = React.useContext(CartContext);
+  const { cart } = React.useContext(CartContext);
   console.log(cart)
   return (
     <ContainerCart>
@@ -12,7 +15,7 @@ const Cart = () => {
       <ContainerMain>
         <SectionMain>
           <ContainerBuscaDeLocalidade>
-            <h2> <span> <FaMapMarkerAlt/> </span> SELECIONE SEU ENDERECO </h2>
+            <h2> <span> <FaMapMarkerAlt /> </span> SELECIONE SEU ENDERECO </h2>
             <ContainerBuscar>
               <input placeholder='Inserir CEP' />
               <button>OK</button>
@@ -22,12 +25,17 @@ const Cart = () => {
           </ContainerBuscaDeLocalidade>
 
           <ContainerProdutos>
-
+            <TittleProdutos>
+              <h2> <span><FaStore /></span> PRODUTO E FRETE </h2>
+              <button> <FaTrash /> REMOVER TODOS OS PRODUTOS</button>
+            </TittleProdutos>
           </ContainerProdutos>
         </SectionMain>
 
         <Aside>
-
+        <TittleProdutos>
+              <h2> <span><FaStore /></span> RESUMO </h2>
+        </TittleProdutos>
         </Aside>
       </ContainerMain>
     </ContainerCart>

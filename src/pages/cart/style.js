@@ -71,8 +71,30 @@ export const Endereco= styled.p`
 `
 
 export const ContainerProdutos = styled.section`
+  padding:25px;
   margin-top: 30px;
   width: 100%;
-  background-color: red;
-  height: 20px;
+  background-color: white;
+`
+export const TittleProdutos = styled.header`
+  display: flex;
+  justify-content: space-between;
+  button{
+    color: rgb(231, 38, 38);
+    background: transparent;
+    border: 1px solid rgb(231, 38, 38);
+    padding: 5px;
+    font-size: 0.8em;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  h2{
+    font-size: 1.3em;
+  }
+  span{
+    color: rgb(255, 101, 0);
+    font-weight: bold;
+    font-size: 0.9em;
+    margin-right: 10px;
+  }
 `
