@@ -6,19 +6,19 @@ export const ContainerCart = styled.main`
 `
 
 export const ContainerBuscaDeLocalidade = styled.div`
-background-color: white;
-padding: 30px;
-h2 {
-  span {
-    margin-right: 5px;
-    color: rgb(255, 101, 0);
-    font-size: 0.9em;
+  background-color: white;
+  padding: 30px;
+  h2 {
+    span {
+      margin-right: 5px;
+      color: rgb(255, 101, 0);
+      font-size: 0.9em;
+    }
+    font-weight: bold;
+    padding:  10px 0px;
+    display: flex;
+    align-items: center;
   }
-  font-weight: bold;
-  padding:  10px 0px;
-  display: flex;
-  align-items: center;
-}
 `
 
 export const ContainerBuscar = styled.div`

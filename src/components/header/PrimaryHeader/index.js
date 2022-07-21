@@ -48,9 +48,11 @@ const PrimaryHeader = () => {
                 <div style={{ marginRight: '20px' }}>
                   <FaHeart />
                 </div>
-                <Badge badgeContent={cart.length} color="secondary">
-                  <FaShoppingCart />
-                </Badge>
+                <NavLink to='/cart'>
+                  <Badge badgeContent={cart.length} color="secondary">
+                    <FaShoppingCart />
+                  </Badge>
+                </NavLink>
               </ContainerIcons>
             </ContainerLogin>
           </ContainerUser>
