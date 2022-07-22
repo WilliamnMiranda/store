@@ -3,6 +3,7 @@ import styled from 'styled-components'
 export const ContainerCart = styled.main`
     margin-top: 35px;
     width: 100%;
+    font-family: Poppins, sans-serif !important
 `
 
 export const ContainerBuscaDeLocalidade = styled.div`
@@ -98,4 +99,76 @@ export const TittleProdutos = styled.header`
     font-size: 0.9em;
     margin-right: 10px;
   }
+`
+export const Resumo = styled.div``
+export const ValorNoPix = styled.div`
+  width: 100%;
+  padding:20px;
+  background-color: red;
+  background: rgb(229, 255, 241);
+  color: rgb(31, 144, 80);
+  p{
+    font-size: 1.1em;
+  }
+  div{
+    font-size: 1.8em;
+    width: 100%;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+    font-weight: bold;
+  }
+  span{
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    font-size: 0.9em;
+  }
+`
+
+export const ContainerButton = styled.div`
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+  text-transform: uppercase;
+  font-weight: bold;
+  button{
+    width: 100%;
+    padding:10px;
+    height: 45px;
+    cursor: pointer;
+  }
+`
+export const ButtonComprar = styled.button`
+  border: none;
+  outline: none;
+  color: white;
+  font-weight: bold;
+  background-color: #FF6500;
+  margin-bottom: 20px;
+`
+export const ButtonContinuar = styled.button`
+border: 1px solid #FF6500;
+color:#FF6500;
+background-color: white;
+`
+export const Valores= styled.div`
+div{
+  margin-bottom: 10px;
+  padding:10px;
+  color: rgb(127, 133, 141);
+  font-size: 0.8em;
+  font-family: Poppins, sans-serif !important;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content:space-between;
+  span{
+    font-size: 1.5em;
+    color:rgb(66, 70, 77);
+  }
+  :first-child{
+    border-bottom: 1px solid rgb(222, 224, 228);
+  }
+}
 `

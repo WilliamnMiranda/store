@@ -82,5 +82,6 @@ export const ContainerIcons = styled.div`
   display: flex;
   & svg{
     font-size: 1.4em;
+    color: rgba(255, 255, 255, 0.8);
   }
 `

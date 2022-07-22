@@ -299,6 +299,9 @@ export const ContainerButton = styled.div`
     height: 45px;
     cursor: pointer;
   }
+  a{
+  color:white;
+  }
 `
 export const ButtonComprar = styled.button`
   border: none;
@@ -312,4 +315,7 @@ export const ButtonContinuar = styled.button`
 border: 1px solid #FF6500;
 color:#FF6500;
 background-color: white;
+a{
+  color:#FF6500;
+  }
 `
