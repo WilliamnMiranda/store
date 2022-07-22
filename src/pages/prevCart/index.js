@@ -35,18 +35,19 @@ import {
 } from "./style";
 import { useParams } from "react-router";
 import productServices from "../../services/product";
+import { NavLink } from "react-router-dom";
 const PrevCart = () => {
   const { id } = useParams();
   const [product, setProductCart] = React.useState({});
-  const getProduct = async () =>{
+  const getProduct = async () => {
     const produto = await productServices.getProductById(id);
     setProductCart(produto);
   }
 
-  React.useEffect(()=>{
+  React.useEffect(() => {
     getProduct()
-  },[])
-  
+  }, [])
+
   const JUROS = 1;
   const INCREASED = JUROS / 100 * 700
   const TERM_VALUE = ((product.price + INCREASED) / 12).toFixed(2);
@@ -170,8 +171,16 @@ const PrevCart = () => {
           </ContainerValorTotalServicos>
 
           <ContainerButton>
-            <ButtonComprar> IR PARA O CARRINHO </ButtonComprar>
-            <ButtonContinuar> CONTINUAR COMPRANDO </ButtonContinuar>
+            <ButtonComprar>
+              <NavLink to='/cart'>
+                IR PARA O CARRINHO
+              </NavLink>
+            </ButtonComprar>
+            <ButtonContinuar>
+              <NavLink to='/'>
+                CONTINUAR COMPRANDO
+              </NavLink>
+            </ButtonContinuar>
           </ContainerButton>
         </ContainerValoresServico>
       </ContainerServicos>
