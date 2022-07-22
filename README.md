@@ -13,3 +13,15 @@ Projeto de uma loja virtual utilizando as seguintes tecnologias :
 - React ( Funcional ) Hooks + Context API
 - NodeJS
 - JWT
+- MaterialUI
+- ReactIcons
+
+## Funcionalidades ja adicionadas
+### Usuarios
+- Visualisar Produtos
+- Comprar Produtos
+- Adicionar ao carrinho
+### Admin
+- Adicionar produtos
+- Remover produtos
+- Editar produtos
