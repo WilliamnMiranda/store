@@ -16,16 +16,16 @@ function App() {
       <DrawerStore>
         <UserStore>
           <CartStore>
-            <Header />
-            <Layout>
-              <GlobalStyle />
-              <Routes>
-                <Route path="/" element={<HomePage />} />
-                <Route path="/login" element={<Access />} />
+          <Header />
+          <Layout>
+            <GlobalStyle />
+            <Routes>
+              <Route path="/" element={<HomePage />} />
+              <Route path="/login" element={<Access />} />
                 <Route path="/product/:id" element={<PrevCart />} />
                 <Route path="/cart" element={<Cart />} />
-              </Routes>
-            </Layout>
+            </Routes>
+          </Layout>
           </CartStore>
         </UserStore>
       </DrawerStore>
