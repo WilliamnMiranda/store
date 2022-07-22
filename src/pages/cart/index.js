@@ -6,6 +6,7 @@ import {
 } from './style'
 import { FaMapMarkerAlt, FaStore, FaTrash } from "react-icons/fa";
 import TimeLine from './timeLine'
+import Produto from './Product';
 const Cart = () => {
   const { cart } = React.useContext(CartContext);
   console.log(cart)
@@ -29,6 +30,9 @@ const Cart = () => {
               <h2> <span><FaStore /></span> PRODUTO E FRETE </h2>
               <button> <FaTrash /> REMOVER TODOS OS PRODUTOS</button>
             </TittleProdutos>
+            {
+             cart && cart.map((product)=> <Produto product={product.product} />)
+            }
           </ContainerProdutos>
         </SectionMain>
 

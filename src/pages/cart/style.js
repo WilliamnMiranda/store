@@ -79,6 +79,7 @@ export const ContainerProdutos = styled.section`
 export const TittleProdutos = styled.header`
   display: flex;
   justify-content: space-between;
+  margin-bottom: 20px;
   button{
     color: rgb(231, 38, 38);
     background: transparent;
