@@ -17,6 +17,7 @@ export const ContainerHome = styled.main`
     }
     @media(max-width: 800px) {
     left: 100%;
+    width: 100%
   }
 `
 export const BannerHome = styled.section`
@@ -45,6 +46,10 @@ export const ContainerMain = styled.section`
         position: fixed;
         background-color: #002156;
     }
+    @media(max-width: 800px) {
+     top: -10px;
+  }
+    
 `
 
 export const ContainerProdutos = styled.section`
