@@ -14,6 +14,7 @@ export const ContainerDrawer = styled.div`
   background-color: rgba(0, 0, 0, 0.3);
   height: 100%;
   position: absolute;
+  left: 0px;
   z-index: 10;
 `;
 

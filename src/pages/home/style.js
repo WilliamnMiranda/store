@@ -50,10 +50,9 @@ export const ContainerMain = styled.section`
 
 export const ContainerProdutos = styled.section`
     width: 100%;
-    background-color: red;
     padding:10px;
     display: flex;
     align-items:center;
-    justify-content: center;
+    justify-content: flex-start;
     flex-wrap: wrap;
 `

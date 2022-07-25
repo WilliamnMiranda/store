@@ -4,8 +4,10 @@ export const ContainerProduct = styled.article`
   padding: 5px;
   width: 218px;
   height: 400px;
+  max-height: 400px;
   background-color: white;
   margin-bottom: 10px;
+  background-color: red;
   margin-left: 5px;
   & .MuiSvgIcon-root {
     font-size: 1.1em;
