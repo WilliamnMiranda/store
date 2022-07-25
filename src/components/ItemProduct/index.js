@@ -19,12 +19,14 @@ import { NavLink } from "react-router-dom";
 import { CartContext } from "../../contexts/cart";
 const ItemProduct = ({ product }) => {
   const { addToCart } = React.useContext(CartContext)
-  console.log(product)
+  const price = product.price.toLocaleString('pt-br',{style: 'currency', currency: 'BRL'})
+  const valueDiscount = (product.price * product.promotion.discount)  / 100
+  const priceDiscount = product.price -  valueDiscount
   return (
     <ContainerProduct>
       <HeaderProduct>
         <ContainerPromo>
-          <Promo>28%</Promo>
+          <Promo>{product.promotion.discount}</Promo>
           <Unidades>
             <p>restam</p>
             <div>{product.inventory}</div>
@@ -47,11 +49,13 @@ const ItemProduct = ({ product }) => {
           alt="produto"
         />
       </PhotoProduct>
-      <NameProduct>{product.name}</NameProduct>
+      <NameProduct>
+        <p>{product.name}</p>
+      </NameProduct>
 
       <Values>
-        <LastValue>R$499,99</LastValue>
-        <NewValue>R${product.price}</NewValue>
+        <LastValue>{price}</LastValue>
+        <NewValue>{priceDiscount.toLocaleString('pt-br',{style: 'currency', currency: 'BRL'})}</NewValue>
         <InfoPix>A vista no pix</InfoPix>
       </Values>
 

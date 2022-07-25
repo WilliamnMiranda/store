@@ -28,7 +28,7 @@ export const ContainerInfosProdutoAdicionado = styled.section`
 
 export const ContainerFotoProduto = styled.img`
   height: 100%;
-  width: 20%;
+  width: 14%;
   margin-right: 10px;
   background-color: red;
   @media(max-width: 800px) {
@@ -101,12 +101,17 @@ export const MessageProduct = styled.p`
 `;
 
 export const Parcelas = styled.div`
-  padding: 20px;
+  padding: 10px;
   display: flex;
+  justify-content: center;
   align-items: center;
   flex-direction: column;
   border-right: 1px solid #FC6B0F;
   color: rgb(86, 92, 105);
+  p{
+    font-size: 0.9em;
+    width: 100%;
+  }
 `
 
 export const Avista = styled.div`

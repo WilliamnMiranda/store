@@ -20,8 +20,8 @@ function App() {
           <Layout>
             <GlobalStyle />
             <Routes>
-              <Route path="/" element={<HomePage />} />
-              <Route path="/login" element={<Access />} />
+                <Route path="/" element={<HomePage />} />
+                <Route path="/login" element={<Access />} />
                 <Route path="/product/:id" element={<PrevCart />} />
                 <Route path="/cart" element={<Cart />} />
             </Routes>

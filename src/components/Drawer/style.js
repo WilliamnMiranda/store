@@ -12,8 +12,9 @@ const animMenu = keyframes`
 export const ContainerDrawer = styled.div`
   width: 100%;
   background-color: rgba(0, 0, 0, 0.3);
-  height: 100%;
-  position: absolute;
+  height: 100vh;
+  position: fixed;
+  left: 0px;
   z-index: 10;
 `;
 
