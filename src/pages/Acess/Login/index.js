@@ -6,8 +6,7 @@ import { UserContext } from '../../../contexts/user';
 const Login = () => {
   const [email,setEmail] = React.useState('');
   const [password,setPassword] = React.useState('');
-  const [user,setUser] = React.useState();
-  const {login} = React.useContext(UserContext);
+  const {login,error} = React.useContext(UserContext);
   const submit = async (e) => {
     e.preventDefault();
     login(email,password);
@@ -22,6 +21,7 @@ const Login = () => {
         <ContainerInput>
           <InputValue value={password} onChange={(e)=> setPassword(e.target.value)} placeholder={'Senha *'} />
         </ContainerInput>
+        {error && <p>{error}</p>}
         <ButtonSubmit type='submit'> ENTRAR </ButtonSubmit>
       </ContainerFormulario>
       <Recuperation>

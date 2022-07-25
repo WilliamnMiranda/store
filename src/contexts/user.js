@@ -7,7 +7,7 @@ export const UserStore = ({children}) => {
   const token = localStorage.getItem('token');
   const [user,setUser] = React.useState();
   const [loading,setLoading] = React.useState(false);
-
+  const [error,setError] = React.useState('')
   const loggedUser = async () => {
     setLoading(true)
     if(token){
@@ -23,11 +23,24 @@ export const UserStore = ({children}) => {
 
   const login = async (email,password) => {
     setLoading(true);
+    if(email === '' && password === '') {
+      setLoading(false);
+      return setError('Digite seus dados')
+    }
     const params = {email, password};
     const user = await UserService.login(params);
-    setUser(user.user);
-    localStorage.setItem('token',user.token);
-    setLoading(false);
+    console.log(user)
+    if(user){
+      console.log('cai if')
+      setUser(user.user);
+      localStorage.setItem('token',user.token);
+      setLoading(false);
+    }
+    else{
+      console.log('entrei no else')
+      setLoading(false);
+      return setError('login ou senha incorretos')
+    }
   }
 
   const register = async (dados) => {
@@ -37,5 +50,5 @@ export const UserStore = ({children}) => {
     localStorage.setItem('token',user.token);
     setLoading(false);
   }
-  return <UserContext.Provider value={{login,user,loading,register}}>{children}</UserContext.Provider>
+  return <UserContext.Provider value={{login,error,user,loading,register}}>{children}</UserContext.Provider>
 }
