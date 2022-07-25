@@ -29,9 +29,7 @@ export const UserStore = ({children}) => {
     }
     const params = {email, password};
     const user = await UserService.login(params);
-    console.log(user)
     if(user){
-      console.log('cai if')
       setUser(user.user);
       localStorage.setItem('token',user.token);
       setLoading(false);

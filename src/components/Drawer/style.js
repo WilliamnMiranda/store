@@ -12,10 +12,9 @@ const animMenu = keyframes`
 export const ContainerDrawer = styled.div`
   width: 100%;
   background-color: rgba(0, 0, 0, 0.3);
-  height: 100vh;
+  height: 100%;
   position: fixed;
-  left: 0px;
-  z-index: 10;
+  z-index: 100000;
 `;
 
 export const TituloDrawer = styled.h1`
@@ -29,6 +28,9 @@ export const DrawerComponent = styled.aside`
   width: 350px;
   height: 100%;
   background-color: rgb(0, 96, 177);
+  @media(max-width: 800px) {
+    width: 100%;
+  }
 `;
 export const DrawerNav = styled.nav``;
 export const DrawerList = styled.ul``;
@@ -42,6 +44,9 @@ export const DrawerItem = styled.li`
     svg{
       margin-right: 10px;
     }
+    @media(max-width: 800px) {
+    width: 100%;
+  }
 `;
 export const CloseDrawer = styled.div`
   position: absolute;
@@ -51,7 +56,7 @@ export const CloseDrawer = styled.div`
   font-size: 1.3em;
   cursor: pointer;
   @media(max-width: 800px) {
-    left: 101%;
+    left: 90%;
   }
 `;
 export const ButtonLogin = styled.button`
@@ -85,7 +90,7 @@ export const ContainerLogin = styled.div`
         font-size: 1.4em;
     }
 `
-export const Dividir= styled.div`
+export const Dividir = styled.div`
   width: 100%;
   height: 1px;
   background-color: rgba(255,255,255,0.5);

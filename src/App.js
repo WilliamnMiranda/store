@@ -16,7 +16,6 @@ function App() {
       <DrawerStore>
         <UserStore>
           <CartStore>
-          <Header />
           <Layout>
             <GlobalStyle />
             <Routes>

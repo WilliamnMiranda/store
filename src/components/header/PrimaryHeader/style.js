@@ -6,6 +6,10 @@ export const Container = styled.div`
   height: 100px;
   background: rgb(0, 96, 177);
   width: 100%;
+  @media(max-width:  1250px) {
+    align-items: center;
+    height: 50px;
+  }
 `
 
 export const ContainerMenu = styled.nav`
@@ -29,6 +33,7 @@ export const IconMenu = styled.li`
   font-size: 2.2em;
   cursor: pointer;
   margin-right:15px;
+  margin-top:5%;
 `
 export const Logo = styled.li``
 export const ContainerInput = styled.div`
