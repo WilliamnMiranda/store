@@ -1,23 +1,24 @@
 import styled from "styled-components";
 
 export const ContainerProduct = styled.article`
-  padding: 5px;
-  width: 218px;
-  height: 400px;
-  max-height: 400px;
-  background-color: white;
+  padding: 10px;
+  width: 210px;
+  height: 430px;
+  max-height: 430px;
   margin-bottom: 10px;
-  background-color: red;
+  background: rgb(255, 255, 255);
   margin-left: 5px;
+  border-radius: 0.25rem;
+  box-shadow: rgb(40 41 61 / 8%) 0px 0px 1px, rgb(96 97 112 / 16%) 0px 0.5px 2px;
   & .MuiSvgIcon-root {
     font-size: 1.1em;
   }
 `;
 export const HeaderProduct = styled.div`
   width: 100%;
-  height: 15%;
   display: flex;
   justify-content: space-between;
+  height: 12%;
 `;
 export const ContainerPromo = styled.div`
   display: flex;
@@ -59,23 +60,37 @@ export const Unidades = styled.div`
 
 export const PhotoProduct = styled.div`
   width: 100%;
-  height: 50%;
   background-color: white;
   display: flex;
   align-items: center;
+  height: 47%;
   justify-content: center;
   img {
     height: 80%;
     width: 80%;
   }
 `;
-export const NameProduct = styled.p`
+export const NameProduct = styled.div`
   font-weight: bold;
-  color: grey;
+  height: 13%;
+  background-color: white;
+  color: rgb(66, 70, 77);
+  font-size: 0.9em;
+  max-width: calc(200px);
+  p{
+    overflow: hidden;
+    text-overflow:ellipsis;
+    max-height: 51px;
+    white-space:wrap;
+  }
 `;
 
 export const Values = styled.p`
-  margin: 3% 0%;
+  height: 20%;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: column;
 `;
 
 export const LastValue = styled.p`
@@ -100,6 +115,6 @@ export const ButtonCart = styled.button`
   border: none;
   outline: none;
   width: 100%;
-  height:8%;
+  height: 8%;
   cursor: pointer;
 `;

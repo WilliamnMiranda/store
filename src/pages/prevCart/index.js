@@ -47,10 +47,9 @@ const PrevCart = () => {
   React.useEffect(() => {
     getProduct()
   }, [])
-
-  const JUROS = 1;
-  const INCREASED = JUROS / 100 * 700
-  const TERM_VALUE = ((product.price + INCREASED) / 12).toFixed(2);
+  const price = product.price && product.price.toLocaleString('pt-br',{style: 'currency', currency: 'BRL'})
+  const valueDiscount = product.price &&  (product.price * product.promotion.discount)  / 100
+  const priceDiscount = product.price &&  product.price -  valueDiscount
   return (
     <Container>
       <ContainerProdutoAdicionado>
@@ -65,12 +64,12 @@ const PrevCart = () => {
 
           <ContainerValorProduto>
             <Parcelas>
-              <p> <strong> 12x R$ {TERM_VALUE} </strong> </p>
-              <p> <strong> (A prazo: R$: {product.price + INCREASED}) </strong> </p>
+              <p> <strong> 12x {(product.price / 12).toFixed(2)}</strong> </p>
+              <p> <strong> {price && price.toLocaleString('pt-br',{style: 'currency', currency: 'BRL'})} total </strong> </p>
             </Parcelas>
 
             <Avista>
-              <div> <strong> R$ {product.price} </strong> </div>
+              <div> <strong> R$ {priceDiscount && priceDiscount.toLocaleString('pt-br',{style: 'currency', currency: 'BRL'})} </strong> </div>
               <p>( A vista )</p>
             </Avista>
           </ContainerValorProduto>

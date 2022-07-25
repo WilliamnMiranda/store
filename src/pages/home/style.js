@@ -33,8 +33,7 @@ export const ContainerMain = styled.section`
     width: 94%;
     position: relative;
     top: -50px;
-    min-height: 500px;
-    background-color: #fafafb;
+     background: rgb(250, 250, 251);
 
     ::after{
         content: '';
@@ -50,9 +49,14 @@ export const ContainerMain = styled.section`
 
 export const ContainerProdutos = styled.section`
     width: 100%;
-    padding:10px;
+    padding:30px;
     display: flex;
     align-items:center;
     justify-content: flex-start;
     flex-wrap: wrap;
+    background: rgb(250, 250, 251);
+    @media(max-width: 800px) {
+    align-items: center;
+    justify-content: center;
+  }
 `
