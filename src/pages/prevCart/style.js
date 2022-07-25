@@ -26,7 +26,7 @@ export const ContainerInfosProdutoAdicionado = styled.section`
   }
 `;
 
-export const ContainerFotoProduto = styled.div`
+export const ContainerFotoProduto = styled.img`
   height: 100%;
   width: 20%;
   margin-right: 10px;
@@ -42,6 +42,7 @@ export const ContainerFotoProduto = styled.div`
 export const ContainerNomeProduto = styled.div`
   height: 100%;
   width: 50%;
+  padding: 10px;
   margin-right: 10px;
   display: flex;
   flex-direction: column;

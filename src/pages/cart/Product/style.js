@@ -4,7 +4,7 @@ export const ContainerProduto = styled.div`
   margin: 0 auto;
   margin-bottom: 15px;
   border-top: 1px solid rgb(222, 224, 228);
-  height: 80px;
+  height: 115px;
   padding: 5px;
   width: 100%;
 `
@@ -75,7 +75,7 @@ export const PrecoAvista = styled.div`
   width: 20%;
   display: flex;
   flex-direction: column;
-  justify-content: flex-end;
+  justify-content: flex-start;
   align-items: flex-end;
   p{
     font-size: 0.8em;

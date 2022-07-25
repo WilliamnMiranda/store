@@ -19,6 +19,7 @@ import { NavLink } from "react-router-dom";
 import { CartContext } from "../../contexts/cart";
 const ItemProduct = ({ product }) => {
   const { addToCart } = React.useContext(CartContext)
+  console.log(product)
   return (
     <ContainerProduct>
       <HeaderProduct>
@@ -42,7 +43,7 @@ const ItemProduct = ({ product }) => {
 
       <PhotoProduct>
         <img
-          src={`https://api-store-application.herokuapp.com/${product.photo}`}
+          src={product.photo}
           alt="produto"
         />
       </PhotoProduct>

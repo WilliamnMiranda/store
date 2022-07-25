@@ -56,7 +56,7 @@ const PrevCart = () => {
       <ContainerProdutoAdicionado>
         <ContainerInfosProdutoAdicionado>
 
-          <ContainerFotoProduto> </ContainerFotoProduto>
+          <ContainerFotoProduto src={product.photo} />
 
           <ContainerNomeProduto>
             <span>Huskey gamimg Brasil</span>
