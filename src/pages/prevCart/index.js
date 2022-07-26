@@ -47,9 +47,9 @@ const PrevCart = () => {
   React.useEffect(() => {
     getProduct()
   }, [])
-  const price = product.price && product.price.toLocaleString('pt-br',{style: 'currency', currency: 'BRL'})
-  const valueDiscount = product.price &&  (product.price * product.promotion.discount)  / 100
-  const priceDiscount = product.price &&  product.price -  valueDiscount
+  const price = product.price && product.price.toLocaleString('pt-br', { style: 'currency', currency: 'BRL' })
+  const valueDiscount = product.price && (product.price * product.promotion.discount) / 100
+  const priceDiscount = product.price && product.price - valueDiscount
   return (
     <Container>
       <ContainerProdutoAdicionado>
@@ -65,11 +65,11 @@ const PrevCart = () => {
           <ContainerValorProduto>
             <Parcelas>
               <p> <strong> 12x {(product.price / 12).toFixed(2)}</strong> </p>
-              <p> <strong> {price && price.toLocaleString('pt-br',{style: 'currency', currency: 'BRL'})} total </strong> </p>
+              <p> <strong> {price && price.toLocaleString('pt-br', { style: 'currency', currency: 'BRL' })} total </strong> </p>
             </Parcelas>
 
             <Avista>
-              <div> <strong> R$ {priceDiscount && priceDiscount.toLocaleString('pt-br',{style: 'currency', currency: 'BRL'})} </strong> </div>
+              <div> <strong> R$ {priceDiscount && priceDiscount.toLocaleString('pt-br', { style: 'currency', currency: 'BRL' })} </strong> </div>
               <p>( A vista )</p>
             </Avista>
           </ContainerValorProduto>
@@ -170,11 +170,11 @@ const PrevCart = () => {
           </ContainerValorTotalServicos>
 
           <ContainerButton>
-            <ButtonComprar>
-              <NavLink to='/cart'>
+            <NavLink to='/cart'>
+              <ButtonComprar>
                 IR PARA O CARRINHO
-              </NavLink>
-            </ButtonComprar>
+              </ButtonComprar>
+            </NavLink>
             <ButtonContinuar>
               <NavLink to='/'>
                 CONTINUAR COMPRANDO
