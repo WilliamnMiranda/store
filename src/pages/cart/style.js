@@ -71,6 +71,9 @@ export const Aside = styled.aside`
   padding: 20px;
   width: 20%;
   background-color: white;
+  @media(max-width: 800px) {
+    width: 100%;
+  }
 `
 
 export const Endereco= styled.p`
