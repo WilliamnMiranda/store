@@ -7,6 +7,9 @@ export const ContainerProduto = styled.div`
   height: 115px;
   padding: 5px;
   width: 100%;
+  @media(max-width: 800px) {
+    display: none;
+  }
 `
 export const ContainerInfosProdutos = styled.div`
   display: flex;
@@ -16,6 +19,9 @@ export const FotoProduto = styled.img`
   width: 10%;
   height: 100%;
   background-color: grey;
+  @media(max-width: 800px) {
+    width: 30%;
+  }
 `
 export const InfoProduto = styled.div`
   display: flex;
@@ -29,9 +35,11 @@ export const Nome = styled.div`
     color:rgb(66, 70, 77);
     font-weight: 600;
     cursor:pointer;
-
     :hover{
         text-decoration: underline;
+    }
+    @media(max-width: 800px) {
+      font-size: 0.7em;
     }
 `
 export const QuantidadeProduto = styled.div`
@@ -78,6 +86,7 @@ export const PrecoAvista = styled.div`
   justify-content: flex-start;
   align-items: flex-end;
   p{
+    @media(max-width: 800px) {display: none}
     font-size: 0.8em;
     color: rgb(127, 133, 141);
     font-family: Poppins, sans-serif !important;
@@ -87,6 +96,9 @@ export const PrecoAvista = styled.div`
     font-weight: bold;
     color: rgb(255, 101, 0);
     margin-top: 10px;
+    @media(max-width: 800px) {
+      width: 0.8em;
+    }
   }
 `
 export const Remove = styled.button`

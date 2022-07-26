@@ -1,5 +1,4 @@
 import React from "react";
-import Header from "./components/header";
 import GlobalStyle from "./components/GlobalStyle/GlobalStyle";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Access from "./pages/Acess";
@@ -20,7 +19,7 @@ function App() {
             <GlobalStyle />
             <Routes>
                 <Route path="/" element={<HomePage />} />
-                <Route path="/login" element={<Access />} />
+                <Route path="/login" element={ <Access />} />
                 <Route path="/product/:id" element={<PrevCart />} />
                 <Route path="/cart" element={<Cart />} />
             </Routes>

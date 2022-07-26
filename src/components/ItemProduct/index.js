@@ -26,7 +26,7 @@ const ItemProduct = ({ product }) => {
     <ContainerProduct>
       <HeaderProduct>
         <ContainerPromo>
-          <Promo>{product.promotion.discount}</Promo>
+          <Promo>{product.promotion.discount}%</Promo>
           <Unidades>
             <p>restam</p>
             <div>{product.inventory}</div>
