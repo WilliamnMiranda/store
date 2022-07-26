@@ -82,28 +82,45 @@ export const ContainerProdutos = styled.section`
   margin-top: 30px;
   width: 100%;
   background-color: white;
+  @media (max-width: 800px){
+    padding:10px;
+  }
 `
 export const TittleProdutos = styled.header`
   display: flex;
   justify-content: space-between;
   margin-bottom: 20px;
+  @media(max-width: 800px) {
+    align-items: center;
+  }
   button{
     color: rgb(231, 38, 38);
     background: transparent;
     border: 1px solid rgb(231, 38, 38);
     padding: 5px;
-    font-size: 0.8em;
+    font-size: 0.9em;
     font-weight: bold;
     cursor: pointer;
+    @media(max-width: 800px) {
+      padding: 0px;
+      font-size: 0.5em;
+      padding: 5px;
+    }
   }
   h2{
     font-size: 1.3em;
+    @media(max-width: 800px) {
+      font-size: 0.9em;
+    }
   }
   span{
     color: rgb(255, 101, 0);
     font-weight: bold;
     font-size: 0.9em;
     margin-right: 10px;
+    @media(max-width: 800px) {
+      margin-right: 0px;
+    }
   }
 `
 export const Resumo = styled.div``
