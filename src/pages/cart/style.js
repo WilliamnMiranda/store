@@ -56,10 +56,16 @@ export const ContainerMain = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
+  @media(max-width: 800px) {
+    flex-direction: column;
+  }
 `
 
 export const SectionMain = styled.div`
   width: 75%;
+  @media(max-width: 800px) {
+    width: 100%;
+  }
 `
 export const Aside = styled.aside`
   padding: 20px;
