@@ -1,7 +1,7 @@
 import React from 'react'
 import {
   Container, ContainerMenu, ContainerLista, ContainerLogo, ContainerInput, ContainerUser, IconMenu, ContainerLogin,
-  ContainerLogoUser, ContainerAccess, ContainerIcons
+  ContainerLogoUser, ContainerAccess, ContainerIcons,ContainerCart
 } from './style'
 import { FiMenu } from "react-icons/fi";
 import Badge from '@mui/material/Badge';
@@ -56,6 +56,13 @@ const PrimaryHeader = () => {
               </ContainerIcons>
             </ContainerLogin>
           </ContainerUser>
+          <ContainerCart>
+                <NavLink to='/cart'>
+                  <Badge badgeContent={cart.length} color="secondary">
+                    <FaShoppingCart />
+                  </Badge>
+                </NavLink>
+              </ContainerCart>
         </ContainerLista>
       </ContainerMenu>
     </Container>

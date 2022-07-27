@@ -90,3 +90,9 @@ export const ContainerIcons = styled.div`
     color: rgba(255, 255, 255, 0.8);
   }
 `
+export const ContainerCart = styled(ContainerIcons)`
+  display: none;
+  @media(max-width:  1250px) {
+    display: block;
+  }
+`
