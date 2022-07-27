@@ -35,8 +35,9 @@ export const ContainerFotoProduto = styled.img`
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 100%;
-    margin-right: 0px;
+    width: 50%;
+    margin: 0 auto;
+    height: 150px;
   }
 `;
 export const ContainerNomeProduto = styled.div`
@@ -202,6 +203,7 @@ export const ContainerGarantias = styled.section`
   margin-top: 10px;
   @media(max-width: 800px){
     flex-wrap: wrap;
+    gap:15px;
   }
 `
 export const Garantia = styled.article`
