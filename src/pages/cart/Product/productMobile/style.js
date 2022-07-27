@@ -25,6 +25,9 @@ export const Name = styled.p`
   color: rgb(66, 70, 77);
   font-weight: 700;
   font-size: 0.8em;
+  display: -webkit-box;
+  -webkit-line-clamp: 1; /** número de linhas que você quer exibir */
+  -webkit-box-orient: vertical;
   overflow: hidden;
   text-overflow: ellipsis;
   margin: 5px 0px;
