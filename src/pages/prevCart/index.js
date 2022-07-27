@@ -1,5 +1,6 @@
 import React from "react";
 import { FaCheck, FaMedal, FaAngleUp, FaCog } from "react-icons/fa";
+import Garantia from "../../components/Garantia";
 import {
   Container,
   ContainerProdutoAdicionado,
@@ -19,11 +20,6 @@ import {
   ContainerTittle,
   ContainerInfoGarantia,
   ContainerGarantias,
-  Garantia,
-  TempoGarantia,
-  ParcelasGarantiga,
-  ValorGarantias,
-  SelecionarGarantia,
   ContainerTittleValoresServico,
   ContainerValorGarantia,
   ContainerValorTotalServicos,
@@ -43,7 +39,6 @@ const PrevCart = () => {
     const produto = await productServices.getProductById(id);
     setProductCart(produto);
   }
-
   React.useEffect(() => {
     getProduct()
   }, [])
@@ -100,50 +95,10 @@ const PrevCart = () => {
           </ContainerInfoGarantia>
 
           <ContainerGarantias>
-            <Garantia>
-              <TempoGarantia> <strong>Sem garantia</strong></TempoGarantia>
-              <ParcelasGarantiga>
-                <p>Em ate 10x</p>
-                <p>Sem juros de</p>
-              </ParcelasGarantiga>
-              <ValorGarantias><strong>R$ 42,06</strong></ValorGarantias>
-              <SelecionarGarantia>
-                <input type="radio" />
-              </SelecionarGarantia>
-            </Garantia>
-            <Garantia>
-              <TempoGarantia><strong>24 meses</strong></TempoGarantia>
-              <ParcelasGarantiga>
-                <p>Em ate 10x</p>
-                <p>Sem juros de</p>
-              </ParcelasGarantiga>
-              <ValorGarantias><strong>R$ 42,06</strong></ValorGarantias>
-              <SelecionarGarantia>
-                <input type="radio" />
-              </SelecionarGarantia>
-            </Garantia>
-            <Garantia>
-              <TempoGarantia><strong>38 meses</strong></TempoGarantia>
-              <ParcelasGarantiga>
-                <p>Em ate 10x</p>
-                <p>Sem juros de</p>
-              </ParcelasGarantiga>
-              <ValorGarantias><strong>R$ 42,06</strong></ValorGarantias>
-              <SelecionarGarantia>
-                <input type="radio" />
-              </SelecionarGarantia>
-            </Garantia>
-            <Garantia>
-              <TempoGarantia><strong>Vitalicio</strong></TempoGarantia>
-              <ParcelasGarantiga>
-                <p>Em ate 10x</p>
-                <p>Sem juros de</p>
-              </ParcelasGarantiga>
-              <ValorGarantias><strong>R$ 42,06</strong></ValorGarantias>
-              <SelecionarGarantia>
-                <input type="radio" />
-              </SelecionarGarantia>
-            </Garantia>
+             <Garantia />
+             <Garantia />
+             <Garantia />
+             <Garantia />
           </ContainerGarantias>
         </ContainerAdicionarServico>
 
