@@ -82,6 +82,9 @@ export const NameProduct = styled.div`
     text-overflow:ellipsis;
     max-height: 51px;
     white-space:wrap;
+    display: -webkit-box;
+  -webkit-line-clamp: 3; /** número de linhas que você quer exibir */
+  -webkit-box-orient: vertical;
   }
 `;
 
