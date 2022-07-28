@@ -19,8 +19,15 @@ const cartServices = {
         return data;
     },
     delete: async(id) => {
-        console.log(id)
-        const produto = await Api.delete(`${router}/${id}`,{
+        const produto = await Api.delete(`${router}/delete/${id}`,{
+            headers:{
+                "x-access-token" : token
+            }
+        })
+        return produto
+    },
+    deleteAll: async() => { 
+        const produto = await Api.delete(`${router}/all`,{
             headers:{
                 "x-access-token" : token
             }
