@@ -41,6 +41,7 @@ const PrevCart = () => {
   }
   React.useEffect(() => {
     getProduct()
+    window.scrollTo(0,0)
   }, [])
   const price = product.price && product.price.toLocaleString('pt-br', { style: 'currency', currency: 'BRL' })
   const valueDiscount = product.price && (product.price * product.promotion.discount) / 100
