@@ -8,7 +8,7 @@ import { FaMapMarkerAlt, FaStore, FaTrash } from "react-icons/fa";
 import TimeLine from './timeLine'
 import Produto from './Product';
 const Cart = () => {
-  const { cart } = React.useContext(CartContext);
+  const { cart,deleteAll } = React.useContext(CartContext);
   const ValoresItems = cart.map((item) => item.product.price);
   const [Address, setAddress] = React.useState({});
   const [cep, setCep] = React.useState();
@@ -48,10 +48,10 @@ const Cart = () => {
           <ContainerProdutos>
             <TittleProdutos>
               <h2> <span><FaStore /></span> PRODUTO E FRETE </h2>
-              <button> <FaTrash /> REMOVER TODOS OS PRODUTOS</button>
+              <button onClick={()=> deleteAll()}> <FaTrash /> REMOVER TODOS OS PRODUTOS</button>
             </TittleProdutos>
             {
-              cart && cart.map((product) => <Produto key={product._id} product={product} />)
+              cart && cart && cart.map((product) => <Produto key={product._id} product={product} />)
             }
           </ContainerProdutos>
         </SectionMain>

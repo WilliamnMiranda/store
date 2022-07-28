@@ -17,7 +17,10 @@ export const CartStore = ({ children }) => {
   const addToCart = async (product) => {
     cartServices.post(product)
     getItemsFromCart()
-    getItemsFromCart()
+  }
+  const deleteAll = async () =>{
+      const product = await cartServices.deleteAll();
+     getItemsFromCart();
   }
   React.useEffect(() => {
     getItemsFromCart()
@@ -25,5 +28,5 @@ export const CartStore = ({ children }) => {
 
 
 
-  return <CartContext.Provider value={{ cart, addToCart, getItemsFromCart,deleteProduct }}>{children}</CartContext.Provider>
+  return <CartContext.Provider value={{ cart,addToCart,deleteAll,getItemsFromCart,deleteProduct }}>{children}</CartContext.Provider>
 }
