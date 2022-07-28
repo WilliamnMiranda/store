@@ -31,6 +31,7 @@ export const ContainerBuscar = styled.div`
     margin: 20px 10px 0px 0px;
     padding: 10px;
     font-size: 1.2em;
+    margin-bottom: 10px;
     }
     button{
     height: 48px;

@@ -35,7 +35,7 @@ const PrimaryHeader = () => {
                 {loading === true ? <div>carregando</div> : user ? user.name : (
                   <>
                     <p>Faça <NavLink to='/login'>Login</NavLink> ou</p>
-                    <p>crie seu <bold><NavLink to='login'>Cadastro</NavLink></bold></p>
+                    <p>crie seu <strong><NavLink to='login'>Cadastro</NavLink></strong></p>
                   </>
                 )
                 }

@@ -9,7 +9,7 @@ const index = () => {
             {
               icons.map((item,index) => {
                 return (
-                  <ItemTimeLine>
+                  <ItemTimeLine key={index}>
                     {item}
                     {index  !== icons.length-1  && <ContainerArrow> <FaLongArrowAltRight /> </ContainerArrow>}
                   </ItemTimeLine>

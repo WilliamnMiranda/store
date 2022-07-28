@@ -8,7 +8,7 @@ const SubHeader = () => {
         <ContainerLista>
           {
             itemsMenu.map((item)=>{
-              return <ItemLista><a href={item}>{item.toUpperCase()}</a></ItemLista>
+              return <ItemLista key={item}><a href={item}>{item.toUpperCase()}</a></ItemLista>
             })
           }
         </ContainerLista>

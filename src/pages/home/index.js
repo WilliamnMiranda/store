@@ -19,7 +19,7 @@ const HomePage = () => {
       </BannerHome>
       <ContainerMain>
         <ContainerProdutos>
-          { listProducts && listProducts.map((product)=> <ItemProduct product={product}/>) }
+          { listProducts && listProducts.map((product)=> <ItemProduct key={product._id} product={product}/>) }
         </ContainerProdutos>
       </ContainerMain>
     </ContainerHome>

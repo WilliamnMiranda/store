@@ -2,7 +2,7 @@ import React from 'react'
 import { CartContext } from '../../contexts/cart'
 import {
   ContainerCart, ContainerBuscaDeLocalidade, ContainerBuscar, ContainerMain, Aside, SectionMain, Endereco, ContainerProdutos,
-  TittleProdutos, ButtonComprar, ButtonContinuar, Resumo, ValorNoPix, ContainerButton,Valores
+  TittleProdutos, ButtonComprar, ButtonContinuar, Resumo, ValorNoPix, ContainerButton, Valores
 } from './style'
 import { FaMapMarkerAlt, FaStore, FaTrash } from "react-icons/fa";
 import TimeLine from './timeLine'
@@ -10,6 +10,25 @@ import Produto from './Product';
 const Cart = () => {
   const { cart } = React.useContext(CartContext);
   const ValoresItems = cart.map((item) => item.product.price);
+  const [Address, setAddress] = React.useState({});
+  const [cep, setCep] = React.useState();
+  const [releasedAddress, setReleasedAddress] = React.useState(false);
+  const captureAddress = async () => {
+    try {
+      const response = await fetch(`https://viacep.com.br/ws/${cep}/json/`, {
+        headers: {
+          'Content-Type': 'application/json',
+          'Accept': 'application/json'
+        }
+      })
+      const data = await response.json()
+      setAddress(data)
+      setReleasedAddress(true);
+    }
+    catch (e) {
+      setReleasedAddress(false)
+    }
+  }
   console.log(cart)
   return (
     <ContainerCart>
@@ -19,11 +38,11 @@ const Cart = () => {
           <ContainerBuscaDeLocalidade>
             <h2> <span> <FaMapMarkerAlt /> </span> SELECIONE SEU ENDERECO </h2>
             <ContainerBuscar>
-              <input placeholder='Inserir CEP' />
-              <button>OK</button>
+              <input placeholder='Inserir CEP' onChange={({ target }) => setCep(target.value)} />
+              <button onClick={captureAddress}>OK</button>
               <a href='a'>Nao lembro meu cep</a>
             </ContainerBuscar>
-            <Endereco>Entregar em : rua qualquer</Endereco>
+            {releasedAddress && <Endereco>Entregar em : {Address.logradouro}</Endereco>}
           </ContainerBuscaDeLocalidade>
 
           <ContainerProdutos>
@@ -32,7 +51,7 @@ const Cart = () => {
               <button> <FaTrash /> REMOVER TODOS OS PRODUTOS</button>
             </TittleProdutos>
             {
-              cart && cart.map((product) => <Produto product={product.product} />)
+              cart && cart.map((product) => <Produto key={product._id} product={product} />)
             }
           </ContainerProdutos>
         </SectionMain>

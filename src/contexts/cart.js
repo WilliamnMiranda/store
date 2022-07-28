@@ -9,6 +9,11 @@ export const CartStore = ({ children }) => {
     setCart(productsCart);
   }
 
+  const deleteProduct = async(id) => {
+   const product =  await cartServices.delete(id)
+   const filter = cart.filter((item)=> item == product.product)
+   setCart(filter)
+  }
   const addToCart = async (product) => {
     cartServices.post(product)
     getItemsFromCart()
@@ -20,5 +25,5 @@ export const CartStore = ({ children }) => {
 
 
 
-  return <CartContext.Provider value={{ cart, addToCart, getItemsFromCart }}>{children}</CartContext.Provider>
+  return <CartContext.Provider value={{ cart, addToCart, getItemsFromCart,deleteProduct }}>{children}</CartContext.Provider>
 }

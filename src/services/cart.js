@@ -17,6 +17,15 @@ const cartServices = {
             }
         })
         return data;
+    },
+    delete: async(id) => {
+        console.log(id)
+        const produto = await Api.delete(`${router}/${id}`,{
+            headers:{
+                "x-access-token" : token
+            }
+        })
+        return produto
     }
 }
 
