@@ -11,8 +11,7 @@ export const CartStore = ({ children }) => {
 
   const deleteProduct = async(id) => {
    const product =  await cartServices.delete(id)
-   const filter = cart.filter((item)=> item == product.product)
-   setCart(filter)
+   getItemsFromCart()
   }
   const addToCart = async (product) => {
     cartServices.post(product)
