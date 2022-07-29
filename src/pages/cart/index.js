@@ -10,9 +10,12 @@ import Produto from './Product';
 const Cart = () => {
   const { cart,deleteAll } = React.useContext(CartContext);
   const ValoresItems = cart.map((item) => item.product.price);
+  const DescontoTotal = cart.map((item) => (item.product.price * item.product.promotion.discount) / 100 );
   const [Address, setAddress] = React.useState({});
   const [cep, setCep] = React.useState();
   const [releasedAddress, setReleasedAddress] = React.useState(false);
+  const ValorTotal = ValoresItems.reduce((previousValue, currentValue) => previousValue  + currentValue, 0)
+  const Avista = ValorTotal - DescontoTotal.reduce((previousValue, currentValue) => previousValue  + currentValue, 0)
   const captureAddress = async () => {
     try {
       const response = await fetch(`https://viacep.com.br/ws/${cep}/json/`, {
@@ -62,14 +65,14 @@ const Cart = () => {
           </TittleProdutos>
           <Resumo>
             <Valores>
-              <div>Valor dos produtos </div>
+              <div>Valor dos produtos <span> {ValorTotal.toLocaleString('pt-br', { style: 'currency', currency: 'BRL' })} </span> </div>
               <div>Frete: <span>R$ 42,90</span></div>
             </Valores>
             <ValorNoPix>
               <p>Valor no <strong>PIX</strong></p>
               <div>
                 <strong>
-                  {ValoresItems.reduce((previousValue, currentValue) => previousValue + currentValue, 0).toLocaleString('pt-br', { style: 'currency', currency: 'BRL' })}
+                  {Avista.toLocaleString('pt-br', { style: 'currency', currency: 'BRL' })}
                 </strong>
               </div>
               <span>{"(Economize : R$ 165,26)"}</span>
