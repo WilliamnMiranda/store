@@ -1,6 +1,7 @@
 import React from 'react'
 import { CartContext } from '../../contexts/cart'
 import EmptyCart from '../../imgs/EmptyCart.png'
+import Message from '../../components/Message'
 import {
   ContainerCart, ContainerLocationSearch, ContainerSearch, ContainerMain, Aside, SectionMain, Endereco, ContainerProducts,
   TittleProducts, ButtonBuy, ButtonContinue, Summary, ValueInPix, ContainerButton, Values, ContainerEmpty
@@ -8,8 +9,7 @@ import {
 import { FaMapMarkerAlt, FaStore, FaTrash } from "react-icons/fa";
 import TimeLine from '../../components/timeLine'
 import Produto from './Product';
-import { NavLink } from 'react-router-dom';
-
+import { useNavigate } from "react-router-dom"
 const Empty = () => {
   return (
     <ContainerEmpty>
@@ -26,9 +26,19 @@ const Cart = () => {
   const DescontoTotal = cart.map((item) => (item.product.price * item.product.promotion.discount) / 100);
   const [Address, setAddress] = React.useState({});
   const [cep, setCep] = React.useState();
+  const [error,setError] = React.useState('');
   const [releasedAddress, setReleasedAddress] = React.useState(false);
   const ValorTotal = ValoresItems.reduce((previousValue, currentValue) => previousValue + currentValue, 0)
   const Avista = ValorTotal - DescontoTotal.reduce((previousValue, currentValue) => previousValue + currentValue, 0)
+  let navigate = useNavigate();
+  const paymentCheck = () =>{ 
+    if(cart.length > 0){
+      navigate("/payment", { replace: true })
+    }else{
+      setError('Sem item no carrinho')
+      setTimeout(()=> setError(''),2000)
+    }
+  }
   const captureAddress = async () => {
     try {
       const response = await fetch(`https://viacep.com.br/ws/${cep}/json/`, {
@@ -49,6 +59,7 @@ const Cart = () => {
   return (
     <ContainerCart>
       <TimeLine stage={0} />
+      {error !== '' && <Message message={{status:false,message: 'Voce nao possui items no carrinho'}} top={0} />}
       <ContainerMain>
         <SectionMain>
           <ContainerLocationSearch>
@@ -91,9 +102,7 @@ const Cart = () => {
               <span>{`(Economize : R$ 165,26)`}</span>
             </ValueInPix>
             <ContainerButton>
-              <NavLink to='/payment'>
-                <ButtonBuy> IR PARA PAGAMNETO</ButtonBuy>
-              </NavLink>
+                <ButtonBuy onClick={paymentCheck}> IR PARA PAGAMNETO</ButtonBuy>
               <ButtonContinue> CONTINUAR COMPRANDO </ButtonContinue>
             </ContainerButton>
           </Summary>

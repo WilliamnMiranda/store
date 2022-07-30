@@ -4,7 +4,7 @@ import TextField from '@mui/material/TextField';
 import MenuItem from '@mui/material/MenuItem';
 import Select from '@mui/material/Select';
 import InputLabel from '@mui/material/InputLabel';
-import Message from './Message/index'
+import Message from '../../../components/Message'
 import FormControl from '@mui/material/FormControl';
 import { CartContext } from '../../../contexts/cart';
 import addressSchema from './validate'
@@ -68,7 +68,7 @@ const Cartao = () => {
             <h2> À vista com até 10% de desconto* ou tudo em até 10x sem juros!</h2>
             <p>O KaBuM! aceita as bandeiras de cartão VISA, MasterCard, ELO, HiperCard, American Express e Diners - Todos em até 10x sem juros ou com desconto em até 3x!</p>
             <p>*O desconto poderá ser concedido ou não até o limite de 10%, podendo ser menor ou zero, de acordo com o detalhado nas descrições do produto e só será aplicado às vendas diretas e entregues pelo KaBuM!, não se aplicando aos produtos de Marketplace.</p>
-            {message.message !== '' && <Message message={message} />}
+            {message.message !== '' && <Message message={message} top={-75}/>}
             <CardData>
                 <ContainerCardData>
                     <TextField

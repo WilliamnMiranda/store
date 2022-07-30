@@ -3,7 +3,8 @@ import styled from 'styled-components'
 export const ContainerCart = styled.main`
     margin-top: 35px;
     width: 100%;
-    font-family: Poppins, sans-serif !important
+    font-family: Poppins, sans-serif !important;
+    position: relative;
 `
 
 export const ContainerLocationSearch = styled.div`
