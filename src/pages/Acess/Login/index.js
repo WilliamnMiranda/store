@@ -1,5 +1,5 @@
 import React from 'react'
-import { Container, Tittle, ContainerFormulario, ContainerInput,ButtonSubmit, Recuperation, RecuperationText,
+import { Container, Tittle, ContainerForm, ContainerInput,ButtonSubmit, Recuperation, RecuperationText,
   SocialsLogins,SubTittle, ButtonFacebook,ButtonGoogle,ContainerButtons} from './style'
 import InputValue from '../../../components/Form/input'
 import { UserContext } from '../../../contexts/user';
@@ -14,7 +14,7 @@ const Login = () => {
   return (
     <Container>
       <Tittle>JÁ TENHO CADASTRO</Tittle>
-      <ContainerFormulario onSubmit={submit}>
+      <ContainerForm onSubmit={submit}>
         <ContainerInput>
           <InputValue value={email} onChange={(e)=> setEmail(e.target.value)} placeholder={'E-mail, CPF ou CNPJ *'}/>
         </ContainerInput>
@@ -23,7 +23,7 @@ const Login = () => {
         </ContainerInput>
         {error && <p>{error}</p>}
         <ButtonSubmit type='submit'> ENTRAR </ButtonSubmit>
-      </ContainerFormulario>
+      </ContainerForm>
       <Recuperation>
         <RecuperationText>ESQUECI MEU LOGIN</RecuperationText>
         <RecuperationText>ESQUECI A MINHA SENHA</RecuperationText>
