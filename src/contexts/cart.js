@@ -4,6 +4,7 @@ export const CartContext = React.createContext();
 
 export const CartStore = ({ children }) => {
   const [cart, setCart] = React.useState([]);
+  
   const getItemsFromCart = async () => {
     const productsCart = await cartServices.get();
     setCart(productsCart);

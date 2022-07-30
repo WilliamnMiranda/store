@@ -5,17 +5,18 @@ import {
   TittleProdutos, ButtonComprar, ButtonContinuar, Resumo, ValorNoPix, ContainerButton, Valores
 } from './style'
 import { FaMapMarkerAlt, FaStore, FaTrash } from "react-icons/fa";
-import TimeLine from './timeLine'
+import TimeLine from '../../components/timeLine'
 import Produto from './Product';
+import { NavLink } from 'react-router-dom';
 const Cart = () => {
-  const { cart,deleteAll } = React.useContext(CartContext);
+  const { cart, deleteAll } = React.useContext(CartContext);
   const ValoresItems = cart.map((item) => item.product.price);
-  const DescontoTotal = cart.map((item) => (item.product.price * item.product.promotion.discount) / 100 );
+  const DescontoTotal = cart.map((item) => (item.product.price * item.product.promotion.discount) / 100);
   const [Address, setAddress] = React.useState({});
   const [cep, setCep] = React.useState();
   const [releasedAddress, setReleasedAddress] = React.useState(false);
-  const ValorTotal = ValoresItems.reduce((previousValue, currentValue) => previousValue  + currentValue, 0)
-  const Avista = ValorTotal - DescontoTotal.reduce((previousValue, currentValue) => previousValue  + currentValue, 0)
+  const ValorTotal = ValoresItems.reduce((previousValue, currentValue) => previousValue + currentValue, 0)
+  const Avista = ValorTotal - DescontoTotal.reduce((previousValue, currentValue) => previousValue + currentValue, 0)
   const captureAddress = async () => {
     try {
       const response = await fetch(`https://viacep.com.br/ws/${cep}/json/`, {
@@ -35,7 +36,7 @@ const Cart = () => {
   console.log(cart)
   return (
     <ContainerCart>
-      <TimeLine />
+      <TimeLine stage={0} />
       <ContainerMain>
         <SectionMain>
           <ContainerBuscaDeLocalidade>
@@ -51,7 +52,7 @@ const Cart = () => {
           <ContainerProdutos>
             <TittleProdutos>
               <h2> <span><FaStore /></span> PRODUTO E FRETE </h2>
-              <button onClick={()=> deleteAll()}> <FaTrash /> REMOVER TODOS OS PRODUTOS</button>
+              <button onClick={() => deleteAll()}> <FaTrash /> REMOVER TODOS OS PRODUTOS</button>
             </TittleProdutos>
             {
               cart && cart && cart.map((product) => <Produto key={product._id} product={product} />)
@@ -75,10 +76,12 @@ const Cart = () => {
                   {Avista.toLocaleString('pt-br', { style: 'currency', currency: 'BRL' })}
                 </strong>
               </div>
-              <span>{"(Economize : R$ 165,26)"}</span>
+              <span>{`(Economize : R$ 165,26)`}</span>
             </ValorNoPix>
             <ContainerButton>
-              <ButtonComprar> IR PARA PAGAMNETO</ButtonComprar>
+              <NavLink to='/payment'>
+                <ButtonComprar> IR PARA PAGAMNETO</ButtonComprar>
+              </NavLink>
               <ButtonContinuar> CONTINUAR COMPRANDO </ButtonContinuar>
             </ContainerButton>
           </Resumo>

@@ -1,15 +1,18 @@
 import React from 'react'
 import { ContainerTimeLine, Progresso, ItemTimeLine, ContainerArrow } from './style'
 import { FaShoppingCart, FaUserAlt, FaAddressCard, FaEye, FaCheckCircle, FaLongArrowAltRight } from "react-icons/fa";
-const index = () => {
+const index = ({stage}) => {
     const icons = [<FaShoppingCart />, <FaUserAlt />, <FaAddressCard />,  <FaEye />, <FaCheckCircle />]
+    const style = {
+      color: '#FF6500'
+    }
     return (
         <ContainerTimeLine>
-            <Progresso> </Progresso>
+            <Progresso></Progresso>
             {
               icons.map((item,index) => {
                 return (
-                  <ItemTimeLine key={index}>
+                  <ItemTimeLine style={stage >= index ? style : {} }key={index}>
                     {item}
                     {index  !== icons.length-1  && <ContainerArrow> <FaLongArrowAltRight /> </ContainerArrow>}
                   </ItemTimeLine>

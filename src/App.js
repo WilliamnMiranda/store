@@ -9,6 +9,7 @@ import Layout from "./components/Layout";
 import HomePage from "./pages/home";
 import PrevCart from "./pages/prevCart";
 import Cart from "./pages/cart";
+import Payment from "./pages/payment";
 function App() {
   return (
     <BrowserRouter>
@@ -22,6 +23,7 @@ function App() {
                 <Route path="/login" element={ <Access />} />
                 <Route path="/product/:id" element={<PrevCart />} />
                 <Route path="/cart" element={<Cart />} />
+                <Route path="/payment" element={<Payment />} />
             </Routes>
           </Layout>
           </CartStore>
