@@ -2,7 +2,7 @@ import React from "react";
 import {
   Container,
   Tittle,
-  ContainerFormulario,
+  ContainerForm,
   ContainerInput,
   ButtonSubmit,
 } from "./style";
@@ -27,7 +27,7 @@ const Register = () => {
   return (
     <Container>
       <Tittle>QUERO ME CADASTRAR</Tittle>
-      <ContainerFormulario  onSubmit={submit}>
+      <ContainerForm  onSubmit={submit}>
       <ContainerInput>
           <InputValue onChange={handleChange} placeholder={"Name *"} name='name' value={dados.name}/>
         </ContainerInput>
@@ -47,7 +47,7 @@ const Register = () => {
           <InputValue onChange={handleChange} placeholder={"CEP  *"} name='cep' value={dados.cep}/>
         </ContainerInput>
         <ButtonSubmit> ENTRAR </ButtonSubmit>
-      </ContainerFormulario>
+      </ContainerForm>
     </Container>
   );
 };

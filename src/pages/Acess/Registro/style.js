@@ -19,7 +19,7 @@ export const Tittle =  styled.h2`
   color: rgb(255, 101, 0);
   margin-bottom: 30px;
 `
-export const ContainerFormulario = styled.form`
+export const ContainerForm = styled.form`
   width: 100%;
 `
 

@@ -2,21 +2,21 @@ import React from 'react'
 import Register from './Registro'
 import Login from './Login'
 import { GoPerson } from "react-icons/go";
-import { ContainerAcesso, TituloAcesso, ContainerGeral, Divisor } from './style'
+import { ContainerAcess, TituloAcess, ContainerGeneral, Divider } from './style'
 import { UserContext } from '../../contexts/user';
 import Loading from '../../components/Loading'
 const Access = () => {
   const { loading } = React.useContext(UserContext);
   return (
-    <ContainerAcesso>
+    <ContainerAcess>
       {loading && <Loading />}
-      <TituloAcesso> <GoPerson /> IDENTIFICAÇÃO</TituloAcesso>
-      <ContainerGeral>
+      <TituloAcess> <GoPerson /> IDENTIFICAÇÃO</TituloAcess>
+      <ContainerGeneral>
         <Login />  
-        <Divisor />
+        <Divider />
         <Register />
-      </ContainerGeral>
-    </ContainerAcesso>
+      </ContainerGeneral>
+    </ContainerAcess>
   )
 }
 
