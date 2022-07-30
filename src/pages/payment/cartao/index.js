@@ -10,6 +10,7 @@ import { CartContext } from '../../../contexts/cart';
 import addressSchema from './validate'
 import { useNavigate } from "react-router-dom";
 const Cartao = () => {
+    const { cart } = React.useContext(CartContext);
     let navigate = useNavigate();
     const [installments, setInstallments] = React.useState('')
     const [nameCard, setNameCard] = React.useState('')
@@ -58,7 +59,6 @@ const Cartao = () => {
 
             });
     }
-    const { cart } = React.useContext(CartContext);
     const ValoresItems = cart.map((item) => item.product.price);
     const ValorTotal = ValoresItems.reduce((previousValue, currentValue) => previousValue + currentValue, 0)
     const parcelas = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]

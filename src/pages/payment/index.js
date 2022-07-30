@@ -4,7 +4,14 @@ import Pix from './pix';
 import Card from './cartao';
 import { ContainerPayment, Aside, ContainerOptions, ContainerOptionsPayment, ButtonTypePayment } from './style'
 import { FaDonate } from "react-icons/fa";
+import { CartContext } from '../../contexts/cart';
+import { useNavigate } from "react-router-dom";
 const Payment = () => {
+  let navigate = useNavigate();
+  const { cart } = React.useContext(CartContext);
+  React.useEffect(()=>{
+    if(cart.length <= 0) navigate("/cart", { replace: true })
+},[])
   const style = {
     backgroundColor: '#FF6500',
     color: 'white'
