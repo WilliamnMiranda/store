@@ -1,13 +1,25 @@
 import React from 'react'
 import { CartContext } from '../../contexts/cart'
+import EmptyCart from '../../imgs/EmptyCart.png'
 import {
-  ContainerCart, ContainerBuscaDeLocalidade, ContainerBuscar, ContainerMain, Aside, SectionMain, Endereco, ContainerProdutos,
-  TittleProdutos, ButtonComprar, ButtonContinuar, Resumo, ValorNoPix, ContainerButton, Valores
+  ContainerCart, ContainerLocationSearch, ContainerSearch, ContainerMain, Aside, SectionMain, Endereco, ContainerProducts,
+  TittleProducts, ButtonBuy, ButtonContinue, Summary, ValueInPix, ContainerButton, Values, ContainerEmpty
 } from './style'
 import { FaMapMarkerAlt, FaStore, FaTrash } from "react-icons/fa";
 import TimeLine from '../../components/timeLine'
 import Produto from './Product';
 import { NavLink } from 'react-router-dom';
+
+const Empty = () => {
+  return (
+    <ContainerEmpty>
+      <div>
+        <img alt='carrinho vazio' src={EmptyCart} />
+      </div>
+    </ContainerEmpty>
+  )
+}
+
 const Cart = () => {
   const { cart, deleteAll } = React.useContext(CartContext);
   const ValoresItems = cart.map((item) => item.product.price);
@@ -39,37 +51,37 @@ const Cart = () => {
       <TimeLine stage={0} />
       <ContainerMain>
         <SectionMain>
-          <ContainerBuscaDeLocalidade>
+          <ContainerLocationSearch>
             <h2> <span> <FaMapMarkerAlt /> </span> SELECIONE SEU ENDERECO </h2>
-            <ContainerBuscar>
+            <ContainerSearch>
               <input placeholder='Inserir CEP' onChange={({ target }) => setCep(target.value)} />
               <button onClick={captureAddress}>OK</button>
               <a href='a'>Nao lembro meu cep</a>
-            </ContainerBuscar>
+            </ContainerSearch>
             {releasedAddress && <Endereco>Entregar em : {Address.logradouro}</Endereco>}
-          </ContainerBuscaDeLocalidade>
+          </ContainerLocationSearch>
 
-          <ContainerProdutos>
-            <TittleProdutos>
+          <ContainerProducts>
+            <TittleProducts>
               <h2> <span><FaStore /></span> PRODUTO E FRETE </h2>
               <button onClick={() => deleteAll()}> <FaTrash /> REMOVER TODOS OS PRODUTOS</button>
-            </TittleProdutos>
+            </TittleProducts>
             {
-              cart && cart && cart.map((product) => <Produto key={product._id} product={product} />)
+              cart.length <= 0 ? <Empty /> : cart.map((product) => <Produto key={product._id} product={product} />)
             }
-          </ContainerProdutos>
+          </ContainerProducts>
         </SectionMain>
 
         <Aside>
-          <TittleProdutos>
+          <TittleProducts>
             <h2> <span><FaStore /></span> RESUMO </h2>
-          </TittleProdutos>
-          <Resumo>
-            <Valores>
+          </TittleProducts>
+          <Summary>
+            <Values>
               <div>Valor dos produtos <span> {ValorTotal.toLocaleString('pt-br', { style: 'currency', currency: 'BRL' })} </span> </div>
               <div>Frete: <span>R$ 42,90</span></div>
-            </Valores>
-            <ValorNoPix>
+            </Values>
+            <ValueInPix>
               <p>Valor no <strong>PIX</strong></p>
               <div>
                 <strong>
@@ -77,14 +89,14 @@ const Cart = () => {
                 </strong>
               </div>
               <span>{`(Economize : R$ 165,26)`}</span>
-            </ValorNoPix>
+            </ValueInPix>
             <ContainerButton>
               <NavLink to='/payment'>
-                <ButtonComprar> IR PARA PAGAMNETO</ButtonComprar>
+                <ButtonBuy> IR PARA PAGAMNETO</ButtonBuy>
               </NavLink>
-              <ButtonContinuar> CONTINUAR COMPRANDO </ButtonContinuar>
+              <ButtonContinue> CONTINUAR COMPRANDO </ButtonContinue>
             </ContainerButton>
-          </Resumo>
+          </Summary>
         </Aside>
       </ContainerMain>
     </ContainerCart>

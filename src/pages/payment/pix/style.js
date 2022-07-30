@@ -10,6 +10,16 @@ export const ContainerPix = styled.section`
         list-style: circle;
         margin-bottom: 10px;
     }
+    button{
+        width: 100%;
+        height: 50px;
+        border:none;
+        background-color: #FF6500;
+        color:white;
+        font-weight: bold;
+        font-size: 1.2em;
+        margin-top: 20px;
+    }
 `
 export const FirstTitulo = styled.div`
     font-size: 1.4em;

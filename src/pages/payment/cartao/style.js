@@ -1,6 +1,7 @@
 import styled from "styled-components";
 
 export const ContainerCard = styled.div`
+    position: relative;
     h1,h2{
         margin-bottom: 10px;
     }
@@ -35,3 +36,6 @@ export const ContainerCardData = styled.div`
     gap:20px;
     margin-bottom: 20px;
 `
+
+export const Error = styled.div``
+export const Success = styled.div``

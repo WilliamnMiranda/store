@@ -6,7 +6,7 @@ export const ContainerCart = styled.main`
     font-family: Poppins, sans-serif !important
 `
 
-export const ContainerBuscaDeLocalidade = styled.div`
+export const ContainerLocationSearch = styled.div`
   background-color: white;
   padding: 30px;
   h2 {
@@ -22,7 +22,7 @@ export const ContainerBuscaDeLocalidade = styled.div`
   }
 `
 
-export const ContainerBuscar = styled.div`
+export const ContainerSearch = styled.div`
     input{
     height: 48px;
     width: 300px;
@@ -81,7 +81,7 @@ export const Endereco= styled.p`
   margin-top: 20px;
 `
 
-export const ContainerProdutos = styled.section`
+export const ContainerProducts = styled.section`
   padding:25px;
   margin-top: 30px;
   width: 100%;
@@ -90,7 +90,7 @@ export const ContainerProdutos = styled.section`
     padding:10px;
   }
 `
-export const TittleProdutos = styled.header`
+export const TittleProducts = styled.header`
   display: flex;
   justify-content: space-between;
   margin-bottom: 20px;
@@ -127,8 +127,8 @@ export const TittleProdutos = styled.header`
     }
   }
 `
-export const Resumo = styled.div``
-export const ValorNoPix = styled.div`
+export const Summary = styled.div``
+export const ValueInPix = styled.div`
   width: 100%;
   padding:20px;
   background-color: red;
@@ -166,7 +166,7 @@ export const ContainerButton = styled.div`
     cursor: pointer;
   }
 `
-export const ButtonComprar = styled.button`
+export const ButtonBuy = styled.button`
   border: none;
   outline: none;
   color: white;
@@ -174,12 +174,12 @@ export const ButtonComprar = styled.button`
   background-color: #FF6500;
   margin-bottom: 20px;
 `
-export const ButtonContinuar = styled.button`
+export const ButtonContinue = styled.button`
 border: 1px solid #FF6500;
 color:#FF6500;
 background-color: white;
 `
-export const Valores= styled.div`
+export const Values= styled.div`
 div{
   margin-bottom: 10px;
   padding:10px;
@@ -198,4 +198,19 @@ div{
     border-bottom: 1px solid rgb(222, 224, 228);
   }
 }
+`
+export const ContainerEmpty = styled.div`
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  div{
+    width: 200px;
+    height: 200px;
+    img{
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+  }
+  }
 `

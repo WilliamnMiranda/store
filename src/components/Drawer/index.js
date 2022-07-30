@@ -36,11 +36,13 @@ const Drawer = () => {
             <DrawerItem>
               <FaUserAlt /> Minha conta
             </DrawerItem>
+            <NavLink to='/orders'>
+              <DrawerItem>
+                <FaShoppingCart /> Meus Pedidos
+              </DrawerItem>
+            </NavLink>
             <DrawerItem>
-              <FaShoppingCart /> Meus Pedidos
-            </DrawerItem>
-            <DrawerItem>
-  
+
               <FaHeart /> Favoritos
             </DrawerItem>
             <DrawerItem>

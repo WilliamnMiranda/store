@@ -41,6 +41,7 @@ const Pix = () => {
                     </strong>
                 </Info>
             </ContainerInfos>
+            <button>FINALIZAR COMPRA</button>
         </ContainerPix>
     )
 }
