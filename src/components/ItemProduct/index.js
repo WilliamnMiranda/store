@@ -59,8 +59,8 @@ const ItemProduct = ({ product }) => {
         <InfoPix>A vista no pix</InfoPix>
       </Values>
 
-      <NavLink to={ localStorage.getItem('token') ? `/product/${product._id} ` : `/login`}>
-        <ButtonCart onClick={()=> addToCart(product)}>COMPRAR</ButtonCart>
+      <NavLink onClick={()=> addToCart(product)} to={ localStorage.getItem('token') ? `/product/${product._id} ` : `/login`}>
+        <ButtonCart>COMPRAR</ButtonCart>
       </NavLink>
     </ContainerProduct>
   );

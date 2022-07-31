@@ -15,6 +15,8 @@ export const CartStore = ({ children }) => {
    getItemsFromCart()
   }
   const addToCart = async (product) => {
+    const checkItemCart = cart.some((item)=> item.product._id === product._id)
+    if(checkItemCart) return 
     cartServices.post(product)
     getItemsFromCart()
   }

@@ -1,5 +1,5 @@
 import Api from './Api'
-const router = '/order'
+const router = '/orders'
 const token = localStorage.getItem('token')
 const orderServices = {
     post: async(products) => {
@@ -8,7 +8,6 @@ const orderServices = {
                 "x-access-token" : token
             }
         });
-        console.log(order)
     },
     get: async() => {
         const { data } = await Api.get(router,{
