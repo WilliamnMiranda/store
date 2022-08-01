@@ -22,6 +22,9 @@ export const ContainerCard = styled.div`
         font-weight: bold;
         font-size: 1.2em;
     }
+    .MuiTextField-root{
+        
+    }
 `
 export const CardData = styled.div`
     border: 1px solid rgb(222, 224, 228);
@@ -39,3 +42,51 @@ export const ContainerCardData = styled.div`
 
 export const Error = styled.div``
 export const Success = styled.div``
+export const NameAndNumber = styled.div`
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    .MuiTextField-root{
+        width: 49%;
+    }
+    @media(max-width:800px){
+        flex-direction: column;
+        .MuiTextField-root{
+            width: 100%;
+            margin-bottom: 10px;
+        }
+    }
+`
+
+export const ValidateAndCvv = styled.div`
+    width: 49%;
+    display: flex;
+    justify-content: space-between;
+    .MuiTextField-root{
+            width: 49%;
+            margin-bottom: 10px;
+    }
+    @media(max-width:800px){
+        flex-direction: column;
+        .MuiTextField-root{
+            width: 100%;
+            margin-bottom: 10px;
+        }
+    }
+`
+export const CpfAndDate = styled.div`
+    width: 49%;
+    display: flex;
+    justify-content: space-between;
+    .MuiTextField-root{
+            width: 49%;
+            margin-bottom: 10px;
+    }
+    @media(max-width:800px){
+        flex-direction: column;
+        .MuiTextField-root{
+            width: 100%;
+            margin-bottom: 10px;
+        }
+    }
+`

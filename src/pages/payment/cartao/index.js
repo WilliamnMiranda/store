@@ -1,5 +1,5 @@
 import React from 'react'
-import { ContainerCard, CardData, ContainerCardData } from './style'
+import { ContainerCard, CardData, ContainerCardData, NameAndNumber,ValidateAndCvv,CpfAndDate } from './style'
 import TextField from '@mui/material/TextField';
 import MenuItem from '@mui/material/MenuItem';
 import Select from '@mui/material/Select';
@@ -11,7 +11,7 @@ import addressSchema from './validate'
 import { useNavigate } from "react-router-dom";
 import orderServices from '../../../services/order'
 const Cartao = () => {
-    const { cart,deleteAll } = React.useContext(CartContext);
+    const { cart, deleteAll } = React.useContext(CartContext);
     let navigate = useNavigate();
     const [installments, setInstallments] = React.useState('')
     const [nameCard, setNameCard] = React.useState('')
@@ -28,7 +28,7 @@ const Cartao = () => {
     const handleChange = (event) => {
         setInstallments(event.target.value);
     };
-    const addOrder =  async() =>{
+    const addOrder = async () => {
         const products = [...cart]
         await orderServices.post(products)
         deleteAll()
@@ -77,51 +77,57 @@ const Cartao = () => {
             {message.message !== '' && <Message message={message} top={-75} />}
             <CardData>
                 <ContainerCardData>
-                    <TextField
-                        label='nome'
-                        type="text"
-                        sx={{ width: '50%' }}
-                        onChange={(e) => setNameCard(e.target.value)}
-                        focused
-                    />
-                    <TextField
-                        label="Numero"
-                        type="text"
-                        sx={{ width: '50%' }}
-                        onChange={(e) => setNumberCard(e.target.value)}
-                        focused
-                    />
+                    <NameAndNumber>
+                        <TextField
+                            label='nome'
+                            type="text"
+                            sx={{ width: '50%' }}
+                            onChange={(e) => setNameCard(e.target.value)}
+                            focused
+                        />
+                        <TextField
+                            label="Numero"
+                            type="text"
+                            sx={{ width: '50%' }}
+                            onChange={(e) => setNumberCard(e.target.value)}
+                            focused
+                        />
+                    </NameAndNumber>
                 </ContainerCardData>
 
                 <ContainerCardData>
-                    <TextField
-                        label="Validade"
-                        type="date"
-                        sx={{ width: '20%' }}
-                        onChange={(e) => setValidateCard(e.target.value)}
-                        focused
-                    />
-                    <TextField
-                        label="CVV"
-                        type="text"
-                        onChange={(e) => setCvvCard(e.target.value)}
-                        sx={{ width: '30%' }}
-                        focused
-                    />
-                    <TextField
-                        label="CPF"
-                        type="text"
-                        onChange={(e) => setCpf(e.target.value)}
-                        sx={{ width: '30%' }}
-                        focused
-                    />
-                    <TextField
-                        label="Data de nascimento"
-                        type="date"
-                        onChange={(e) => setDate(e.target.value)}
-                        sx={{ width: '20%' }}
-                        focused
-                    />
+                    <ValidateAndCvv>
+                        <TextField
+                            label="Validade"
+                            type="date"
+                            sx={{ width: '20%' }}
+                            onChange={(e) => setValidateCard(e.target.value)}
+                            focused
+                        />
+                        <TextField
+                            label="CVV"
+                            type="text"
+                            onChange={(e) => setCvvCard(e.target.value)}
+                            sx={{ width: '30%' }}
+                            focused
+                        />
+                    </ValidateAndCvv>
+                    <CpfAndDate>
+                        <TextField
+                            label="CPF"
+                            type="text"
+                            onChange={(e) => setCpf(e.target.value)}
+                            sx={{ width: '30%' }}
+                            focused
+                        />
+                        <TextField
+                            label="Data de nascimento"
+                            type="date"
+                            onChange={(e) => setDate(e.target.value)}
+                            sx={{ width: '20%' }}
+                            focused
+                        />
+                    </CpfAndDate>
                 </ContainerCardData>
                 <ContainerCardData>
                     <FormControl sx={{ m: 1, width: '100%' }}>

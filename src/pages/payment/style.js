@@ -19,18 +19,27 @@ export const ContainerOptions = styled.section`
     align-items: flex-start;
     justify-content: space-between;
     background-color: white;
+    @media(max-width: 800px){
+        flex-direction: column;
+    }
 `
 export const Aside = styled.aside`
     width: 25%;
     background-color: white;
     display: flex;
     flex-direction: column;
-    padding:15px
+    padding:15px;
+    @media(max-width: 800px){
+        width: 100%;
+    }
 `
 export const ContainerOptionsPayment = styled.article`
     width: 73%;
     background-color: white;
     padding:15px;
+    @media(max-width: 800px){
+        width: 100%;
+    }
 `
 export const ButtonTypePayment = styled.button`
     margin-top: 20px;
