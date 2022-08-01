@@ -11,7 +11,7 @@ import addressSchema from './validate'
 import { useNavigate } from "react-router-dom";
 import orderServices from '../../../services/order'
 const Cartao = () => {
-    const { cart } = React.useContext(CartContext);
+    const { cart,deleteAll } = React.useContext(CartContext);
     let navigate = useNavigate();
     const [installments, setInstallments] = React.useState('')
     const [nameCard, setNameCard] = React.useState('')
@@ -31,8 +31,9 @@ const Cartao = () => {
     const addOrder =  async() =>{
         const products = [...cart]
         await orderServices.post(products)
+        deleteAll()
         setTimeout(() => setMessage(initialMessage), 1000)
-        setTimeout(() => navigate("/pedidos", { replace: true }), 1200)
+        setTimeout(() => navigate("/orders", { replace: true }), 1200)
     }
     const confirmPayment = () => {
         const InformationsPayment = {
@@ -77,7 +78,7 @@ const Cartao = () => {
             <CardData>
                 <ContainerCardData>
                     <TextField
-                        placeholder='nome'
+                        label='nome'
                         type="text"
                         sx={{ width: '50%' }}
                         onChange={(e) => setNameCard(e.target.value)}

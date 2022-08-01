@@ -3,7 +3,7 @@ import { ContainerPix, FirstTitulo, SecondTittle, ContainerInfos, Info } from '.
 import { CartContext } from '../../../contexts/cart';
 const Pix = () => {
     const { cart } = React.useContext(CartContext);
-    const ValoresItems = cart.map((item) => item.product.price);
+    const ValoresItems = cart.map((item) => item.product.price * item.amount) ;
     const DescontoTotal = cart.map((item) => (item.product.price * item.product.promotion.discount) / 100);
     const ValorTotal = ValoresItems.reduce((previousValue, currentValue) => previousValue + currentValue, 0)
     const Avista = ValorTotal - DescontoTotal.reduce((previousValue, currentValue) => previousValue + currentValue, 0)

@@ -18,6 +18,16 @@ const cartServices = {
         })
         return data;
     },
+    patch: async(items) => {
+        console.log(items)
+        const  {data}  = await Api.patch(router,items,{
+            headers:{
+                "x-access-token" : token
+            }
+        })
+        console.log(data)
+        return data;
+    },
     delete: async(id) => {
         const produto = await Api.delete(`${router}/delete/${id}`,{
             headers:{

@@ -22,7 +22,7 @@ const Empty = () => {
 
 const Cart = () => {
   const { cart, deleteAll } = React.useContext(CartContext);
-  const ValoresItems = cart.map((item) => item.product.price);
+  const ValoresItems = cart.map((item) => item.product.price * item.amount);
   const DescontoTotal = cart.map((item) => (item.product.price * item.product.promotion.discount) / 100);
   const [Address, setAddress] = React.useState({});
   const [cep, setCep] = React.useState();
@@ -55,7 +55,6 @@ const Cart = () => {
       setReleasedAddress(false)
     }
   }
-  console.log(cart)
   return (
     <ContainerCart>
       <TimeLine stage={0} />

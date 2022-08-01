@@ -1,8 +1,8 @@
 import React from 'react'
 import { ContainerTimeLine, Progresso, ItemTimeLine, ContainerArrow } from './style'
-import { FaShoppingCart, FaUserAlt, FaAddressCard, FaEye, FaCheckCircle, FaLongArrowAltRight } from "react-icons/fa";
+import { FaShoppingCart, FaUserAlt, FaAddressCard,FaLongArrowAltRight } from "react-icons/fa";
 const index = ({stage}) => {
-    const icons = [<FaShoppingCart />, <FaUserAlt />, <FaAddressCard />,  <FaEye />, <FaCheckCircle />]
+    const icons = [<FaShoppingCart />, <FaUserAlt />, <FaAddressCard />]
     const style = {
       color: '#FF6500'
     }
