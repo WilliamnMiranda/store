@@ -25,7 +25,7 @@ export const CartStore = ({ children }) => {
   }
   const updateItem = async (items) => {
     const newProducts = await cartServices.patch(items)
-    setCart(newProducts)
+    att()
   }
   const deleteAll = async () =>{
       const product = await cartServices.deleteAll();

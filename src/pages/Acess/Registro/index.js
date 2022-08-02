@@ -7,6 +7,7 @@ import {
   ButtonSubmit,
 } from "./style";
 import InputValue from "../../../components/Form/input";
+import { useNavigate } from "react-router-dom"
 import { UserContext } from "../../../contexts/user";
 const Register = () => {
   const [dados,setDados] = React.useState({
@@ -16,14 +17,15 @@ const Register = () => {
     identificador: '',
     cep: ''
   });
+  let navigate = useNavigate();
   const [confirmPassword,setConfirmPassword] = React.useState(''); 
   const handleChange = ({target}) => { setDados({ ...dados, [target.name]: target.value }) };
   const { register } = React.useContext(UserContext);
   const submit = async (e) => {
     e.preventDefault();
-    register(dados);
+    await register(dados);
+    navigate("/", { replace: true })
   }
-  console.log(dados)
   return (
     <Container>
       <Tittle>QUERO ME CADASTRAR</Tittle>
@@ -32,13 +34,13 @@ const Register = () => {
           <InputValue onChange={handleChange} placeholder={"Name *"} name='name' value={dados.name}/>
         </ContainerInput>
         <ContainerInput>
-          <InputValue onChange={handleChange} placeholder={"E-mail *"} name='email' value={dados.email}/>
+          <InputValue type='email' onChange={handleChange} placeholder={"E-mail *"} name='email' value={dados.email}/>
         </ContainerInput>
         <ContainerInput>
-          <InputValue onChange={handleChange} placeholder={"Crie sua senha *"} name='password' value={dados.password}/>
+          <InputValue type='password' onChange={handleChange} placeholder={"Crie sua senha *"} name='password' value={dados.password}/>
         </ContainerInput>
         <ContainerInput>
-          <InputValue onChange={(e)=> setConfirmPassword(e.target.value)} placeholder={"Confirme a senha *"} name='passwordConfirm' value={confirmPassword}/>s
+          <InputValue type='password' onChange={(e)=> setConfirmPassword(e.target.value)} placeholder={"Confirme a senha *"} name='passwordConfirm' value={confirmPassword}/>
         </ContainerInput>
         <ContainerInput>
           <InputValue onChange={handleChange} placeholder={"CPF ou CNPJ *"} name='identificador' value={dados.identificador}/>
