@@ -49,3 +49,43 @@ margin-bottom: 5px;
 export const AlterarItems = styled.div`
 
 `
+
+export const QuantidadeProduto = styled.div`
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding:0px 50px 0px 0px;
+  p{
+    font-size: 0.8em;
+  }
+  div{
+    display: flex;
+  }
+  button{
+    background-color: transparent;
+    border: none;
+    color: rgb(255, 101, 0);
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    span{
+      margin-right: 0px;
+    }
+  }
+`
+export const BotaodiminuirQuantidade = styled.button``
+export const BotaoAumentarQuantidade = styled.button``
+export const QuantidadeDoProduto = styled.div`
+  font-size: 0.9em;
+  position: relative;
+  top:-10%;
+  padding: 5px;
+`
+export const Remove = styled.button`
+  font-size: 0.6em!important;
+  color: rgb(231, 38, 38)!important;
+  font-weight: bold;
+`

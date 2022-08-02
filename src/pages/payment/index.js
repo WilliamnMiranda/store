@@ -12,6 +12,9 @@ const Payment = () => {
   React.useEffect(()=>{
     if(cart.length <= 0) navigate("/cart", { replace: true })
 },[])
+React.useEffect(()=>{
+  window.scrollTo(0,0)
+},[])
   const style = {
     backgroundColor: '#FF6500',
     color: 'white'
