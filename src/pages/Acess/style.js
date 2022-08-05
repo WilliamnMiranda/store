@@ -3,6 +3,7 @@ import styled from 'styled-components'
 export const ContainerAcess = styled.section`
   margin: 0 auto;
   width: 65%;
+  overflow: hidden;
   @media(max-width:  1250px) {
       width: 100%;
   }

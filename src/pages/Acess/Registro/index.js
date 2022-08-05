@@ -24,17 +24,18 @@ const Register = () => {
   const submit = async (e) => {
     e.preventDefault();
     await register(dados);
-    navigate("/", { replace: true })
+    window.location.reload();
+    window.location.href = "/"
   }
   return (
     <Container>
       <Tittle>QUERO ME CADASTRAR</Tittle>
       <ContainerForm  onSubmit={submit}>
       <ContainerInput>
-          <InputValue onChange={handleChange} placeholder={"Name *"} name='name' value={dados.name}/>
+          <InputValue onChange={handleChange} placeholder={"Name *"} name='name' value={dados.name} />
         </ContainerInput>
         <ContainerInput>
-          <InputValue type='email' onChange={handleChange} placeholder={"E-mail *"} name='email' value={dados.email}/>
+          <InputValue type='email' onChange={handleChange} placeholder={"E-mail *"} name='email' value={dados.email} />
         </ContainerInput>
         <ContainerInput>
           <InputValue type='password' onChange={handleChange} placeholder={"Crie sua senha *"} name='password' value={dados.password}/>
@@ -43,7 +44,7 @@ const Register = () => {
           <InputValue type='password' onChange={(e)=> setConfirmPassword(e.target.value)} placeholder={"Confirme a senha *"} name='passwordConfirm' value={confirmPassword}/>
         </ContainerInput>
         <ContainerInput>
-          <InputValue onChange={handleChange} placeholder={"CPF ou CNPJ *"} name='identificador' value={dados.identificador}/>
+          <InputValue onChange={handleChange} placeholder={"CPF ou CNPJ *"} name='identificador' value={dados.identificador} />
         </ContainerInput>
         <ContainerInput>
           <InputValue onChange={handleChange} placeholder={"CEP  *"} name='cep' value={dados.cep}/>

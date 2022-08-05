@@ -5,9 +5,10 @@ export const ContainerLoading = styled.article`
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 100%;
+    width: 100vw;
     top: 0px;
-    left: 0px;
-    height: 100%;
+    overflow: hidden;
+    left: -13%;
+    height: 100vh;
     background-color: rgba(1,1,1,0.6);
 `

@@ -32,8 +32,8 @@ const Cartao = () => {
         const products = [...cart]
         await orderServices.post(products)
         deleteAll()
-        setTimeout(() => setMessage(initialMessage), 1000)
-        setTimeout(() => navigate("/orders", { replace: true }), 1200)
+        setTimeout(() => setMessage(initialMessage), 500)
+        setTimeout(() => navigate("/orders", { replace: true }), 1000)
     }
     const confirmPayment = () => {
         const InformationsPayment = {

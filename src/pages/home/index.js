@@ -3,12 +3,14 @@ import { ContainerHome, BannerHome, ContainerMain,ContainerProdutos } from "./st
 import productServices from "../../services/product";
 import Banner from "../../imgs/banner.jpg";
 import ItemProduct from '../../components/ItemProduct'
+import { CartContext } from "../../contexts/cart";
 const HomePage = () => {
   const [listProducts, setListProducts] = React.useState();
   const getProducts = async () => {
     const products = await productServices.get();
     setListProducts(products);
   };
+  const { getItemsFromCart } = React.useContext(CartContext);
   React.useEffect(() => {
     getProducts();
   }, []);
